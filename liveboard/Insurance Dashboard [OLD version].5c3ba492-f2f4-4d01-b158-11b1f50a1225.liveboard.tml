@@ -1,0 +1,1363 @@
+guid: 5c3ba492-f2f4-4d01-b158-11b1f50a1225
+liveboard:
+  name: "Insurance Dashboard [OLD version]"
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: Monthly Safety Events Count
+      tables:
+      - id: Safety Events
+        name: Safety Events
+        fqn: 5c5e7ca2-ea19-423f-a2cb-65bb2aac1ed8
+      search_query: "[Safety Event Counts] [Event Date].monthly"
+      answer_columns:
+      - name: Month(Event Date)
+      - name: Safety Event Counts
+      table:
+        table_columns:
+        - column_id: Month(Event Date)
+          show_headline: false
+        - column_id: Safety Event Counts
+          show_headline: false
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Month(Event Date)
+        - column_id: Safety Event Counts
+        axis_configs:
+        - x:
+          - Month(Event Date)
+          "y":
+          - Safety Event Counts
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Month(Event Date)\",\"columnProperty\": {}},{\"columnId\": \"Safety Event Counts\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"06719cf7-52ad-41b6-82f6-0158da0a800c\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Safety Event Counts\"],\"isOpposite\": false}},{\"id\": \"6643cf51-092e-41f1-9b7e-884f50db70b1\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Month(Event Date)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Safety Event Counts\",\"color\": \"#2770ef\"}],\"customColorSelectorArray\": [\"#F04152\",\"#06BF7F\",\"#F04152\",\"#747E8C\"]}"
+      display_mode: CHART_MODE
+    viz_guid: 7001dc2f-a8ea-4651-a3b3-5b5a0fb2245f
+  - id: Viz_2
+    answer:
+      name: Monthly Coachable vs Coached Event Trend
+      description: Monthly View
+      tables:
+      - id: Safety Events
+        name: Safety Events
+        fqn: 5c5e7ca2-ea19-423f-a2cb-65bb2aac1ed8
+      search_query: "[Event Date] [Event Date].monthly [Safety Event Counts] [Coaching Status]"
+      answer_columns:
+      - name: Coaching Status
+      - name: Month(Event Date)
+      - name: Safety Event Counts
+      table:
+        table_columns:
+        - column_id: Coaching Status
+          show_headline: false
+        - column_id: Month(Event Date)
+          show_headline: false
+        - column_id: Safety Event Counts
+          show_headline: false
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: STACKED_BAR
+        chart_columns:
+        - column_id: Coaching Status
+        - column_id: Month(Event Date)
+        - column_id: Safety Event Counts
+        axis_configs:
+        - x:
+          - Month(Event Date)
+          "y":
+          - Safety Event Counts
+          color:
+          - Coaching Status
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"visibleSeriesNames\": [\"coachable\",\"coached\",\"pending_review\",\"uncoachable\"],\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"markersEnabled\": true,\"pivotSummariesState\": {}},\"showStackedLabels\": true,\"allLabels\": true},\"columnProperties\": [{\"columnId\": \"Month(Event Date)\",\"columnProperty\": {\"dataLabels\": true}},{\"columnId\": \"Coaching Status\",\"columnProperty\": {\"dataLabels\": true}},{\"columnId\": \"Safety Event Counts\",\"columnProperty\": {\"dataLabels\": true}}],\"axisProperties\": [{\"id\": \"db7ebc62-6237-488e-869d-76a549ada7d1\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Safety Event Counts\"],\"isOpposite\": false}},{\"id\": \"194fb485-a10a-4d9e-8fe2-76cc93c736f4\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Month(Event Date)\"]}}],\"seriesColors\": [{\"serieName\": \"a962725b-f3c0-4877-9f7d-848eac04dc59\",\"color\": \"#48D1E0\"},{\"serieName\": \"4a26a8be-87cb-4003-89e3-488f71787b64\",\"color\": \"#2E75F0\"},{\"serieName\": \"pending_review\",\"color\": \"#06BF7F\"},{\"serieName\": \"coachable\",\"color\": \"#48D1E0\"},{\"serieName\": \"coached\",\"color\": \"#2E75F0\"},{\"serieName\": \"uncoachable\",\"color\": \"#747E8C\"}],\"systemSeriesColors\": [{\"serieName\": \"a962725b-f3c0-4877-9f7d-848eac04dc59\",\"color\": \"#48D1E0\"},{\"serieName\": \"4a26a8be-87cb-4003-89e3-488f71787b64\",\"color\": \"#2E75F0\"},{\"serieName\": \"coachable\",\"color\": \"#06BF7F\"},{\"serieName\": \"coached\",\"color\": \"#FCC838\"},{\"serieName\": \"pending_review\",\"color\": \"#48D1E0\"},{\"serieName\": \"uncoachable\",\"color\": \"#2E75F0\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 66de617d-c70e-4f82-aa72-48aea13e3f2a
+  - id: Viz_3
+    answer:
+      name: Average Fleet Drive Score
+      tables:
+      - id: Fleet Drive Score with Dashcam Dates
+        name: Fleet Drive Score with Dashcam Dates
+        fqn: 51f3f134-1ff2-4c70-9eb7-fbff84bae80f
+      search_query: "average [Drive Score]"
+      answer_columns:
+      - name: Average Drive Score
+      table:
+        table_columns:
+        - column_id: Average Drive Score
+          show_headline: false
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Average Drive Score
+        axis_configs:
+        - "y":
+          - Average Drive Score
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {\"customProps\": \"{\\\"showLabel\\\":true,\\\"showComparison\\\":false,\\\"showSparkline\\\":false,\\\"showAnomalies\\\":true,\\\"showBounds\\\":true,\\\"customCompare\\\":\\\"PREV_AVAILABLE\\\"}\",\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Average Drive Score\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"c5b5752b-085d-4114-bea1-fe37049d9963\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Average Drive Score\"],\"isOpposite\": false}},{\"id\": \"6c09dbd2-dc0c-4111-8cf3-881b6c91208e\",\"properties\": {\"axisType\": \"X\"}}],\"systemSeriesColors\": [{\"serieName\": \"Average Drive Score\",\"color\": \"#2770ef\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 264afa83-00ef-401b-af23-da45f1833d0a
+  - id: Viz_4
+    answer:
+      name: Events per 1M Miles by Event Types
+      tables:
+      - id: Safety Events
+        name: Safety Events
+        fqn: 5c5e7ca2-ea19-423f-a2cb-65bb2aac1ed8
+      search_query: "[Events per 1M Miles] [Event Date].monthly [Event Types]"
+      answer_columns:
+      - name: Event Types
+      - name: Events per 1M Miles
+        format:
+          category: NUMBER
+          numberFormatConfig:
+            unit: NONE
+            decimals: 0.0
+            negativeValueFormat: PREFIX_DASH
+            toSeparateThousands: true
+          isCategoryEditable: true
+      - name: Month(Event Date)
+      table:
+        table_columns:
+        - column_id: Event Types
+          show_headline: false
+        - column_id: Events per 1M Miles
+          show_headline: false
+        - column_id: Month(Event Date)
+          show_headline: false
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: STACKED_COLUMN
+        chart_columns:
+        - column_id: Event Types
+        - column_id: Events per 1M Miles
+        - column_id: Month(Event Date)
+        axis_configs:
+        - x:
+          - Month(Event Date)
+          "y":
+          - Events per 1M Miles
+          color:
+          - Event Types
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}},\"showStackedLabels\": true},\"columnProperties\": [{\"columnId\": \"Event Types\",\"columnProperty\": {}},{\"columnId\": \"Events per 1M Miles\",\"columnProperty\": {\"dataLabels\": false}},{\"columnId\": \"Month(Event Date)\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"a493b17c-a457-44da-bd1a-a1768e98f338\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Events per 1M Miles\"],\"isOpposite\": false}},{\"id\": \"d9d36d6d-a8f9-4038-8a25-04146b41a0b0\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Month(Event Date)\"]}}],\"seriesColors\": [{\"serieName\": \"Events per 1M Miles\",\"color\": \"#747E8C\"},{\"serieName\": \"crash\",\"color\": \"#8C62F5\"},{\"serieName\": \"distraction\",\"color\": \"#56D3A8\"},{\"serieName\": \"hard accel\",\"color\": \"#FCD977\"},{\"serieName\": \"seat belt violation\",\"color\": \"#48D1E0\"},{\"serieName\": \"stop sign violation\",\"color\": \"#2359B6\"},{\"serieName\": \"cell phone\",\"color\": \"#F04152\"},{\"serieName\": \"drowsiness\",\"color\": \"#721F27\"},{\"serieName\": \"hard brake\",\"color\": \"#FF8142\"},{\"serieName\": \"hard corner\",\"color\": \"#049160\"},{\"serieName\": \"manual event\",\"color\": \"#BF982A\"},{\"serieName\": \"tailgating\",\"color\": \"#FCC838\"},{\"serieName\": \"unsafe lane change\",\"color\": \"#47515F\"}],\"systemSeriesColors\": [{\"serieName\": \"Events per 1M Miles\",\"color\": \"#747E8C\"},{\"serieName\": \"crash\",\"color\": \"#8C62F5\"},{\"serieName\": \"distraction\",\"color\": \"#56D3A8\"},{\"serieName\": \"hard accel\",\"color\": \"#FCD977\"},{\"serieName\": \"seat belt violation\",\"color\": \"#48D1E0\"},{\"serieName\": \"stop sign violation\",\"color\": \"#2359B6\"},{\"serieName\": \"cell phone\",\"color\": \"#F04152\"},{\"serieName\": \"drowsiness\",\"color\": \"#721F27\"},{\"serieName\": \"hard brake\",\"color\": \"#FF8142\"},{\"serieName\": \"hard corner\",\"color\": \"#049160\"},{\"serieName\": \"manual event\",\"color\": \"#BF982A\"},{\"serieName\": \"tailgating\",\"color\": \"#FCC838\"},{\"serieName\": \"unsafe lane change\",\"color\": \"#47515F\"},{\"serieName\": \"hard accel above thres\",\"color\": \"#06BF7F\"},{\"serieName\": \"hard accel below thres\",\"color\": \"#FCD977\"},{\"serieName\": \"hard brake above thres\",\"color\": \"#82DFE9\"},{\"serieName\": \"hard brake below thres\",\"color\": \"#48D1E0\"},{\"serieName\": \"hard corner above thres\",\"color\": \"#71A1F4\"},{\"serieName\": \"hard corner below thres\",\"color\": \"#2E75F0\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 70f37af6-f268-4c2c-9ee1-c2141c9cdf72
+  - id: Viz_5
+    answer:
+      name: Safety Events by Month
+      tables:
+      - id: Safety Events
+        name: Safety Events
+        fqn: 5c5e7ca2-ea19-423f-a2cb-65bb2aac1ed8
+      search_query: "[Event Date].monthly [Event Types] [Safety Event Counts] [Fleet Account Name]"
+      answer_columns:
+      - name: Event Types
+      - name: Fleet Account Name
+      - name: Month(Event Date)
+      - name: Safety Event Counts
+      table:
+        table_columns:
+        - column_id: Event Types
+          show_headline: false
+        - column_id: Fleet Account Name
+          show_headline: false
+        - column_id: Month(Event Date)
+          show_headline: false
+        - column_id: Safety Event Counts
+          show_headline: false
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: STACKED_COLUMN
+        chart_columns:
+        - column_id: Event Types
+        - column_id: Fleet Account Name
+        - column_id: Month(Event Date)
+        - column_id: Safety Event Counts
+        axis_configs:
+        - x:
+          - Month(Event Date)
+          "y":
+          - Safety Event Counts
+          color:
+          - Event Types
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}},\"showStackedLabels\": true},\"columnProperties\": [{\"columnId\": \"Event Types\",\"columnProperty\": {}},{\"columnId\": \"Fleet Account Name\",\"columnProperty\": {}},{\"columnId\": \"Month(Event Date)\",\"columnProperty\": {}},{\"columnId\": \"Safety Event Counts\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"ae2d10db-6584-432a-84b4-1ebc17bfaee6\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Safety Event Counts\"],\"isOpposite\": false}},{\"id\": \"acf20443-fbbe-433a-ba83-497ea9637f1d\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Month(Event Date)\"]}}],\"seriesColors\": [{\"serieName\": \"crash\",\"color\": \"#8C62F5\"},{\"serieName\": \"distraction\",\"color\": \"#56D3A8\"},{\"serieName\": \"hard accel\",\"color\": \"#FCD977\"},{\"serieName\": \"seat belt violation\",\"color\": \"#48D1E0\"},{\"serieName\": \"stop sign violation\",\"color\": \"#2359B6\"},{\"serieName\": \"cell phone\",\"color\": \"#F04152\"},{\"serieName\": \"drowsiness\",\"color\": \"#721F27\"},{\"serieName\": \"unsafe lane change\",\"color\": \"#2F3947\"},{\"serieName\": \"hard corner\",\"color\": \"#049160\"},{\"serieName\": \"manual event\",\"color\": \"#BF982A\"},{\"serieName\": \"hard brake\",\"color\": \"#FF8142\"},{\"serieName\": \"tailgating\",\"color\": \"#FCC838\"}],\"systemSeriesColors\": [{\"serieName\": \"crash\",\"color\": \"#8C62F5\"},{\"serieName\": \"distraction\",\"color\": \"#56D3A8\"},{\"serieName\": \"hard accel\",\"color\": \"#FCD977\"},{\"serieName\": \"seat belt violation\",\"color\": \"#48D1E0\"},{\"serieName\": \"stop sign violation\",\"color\": \"#2359B6\"},{\"serieName\": \"cell phone\",\"color\": \"#F04152\"},{\"serieName\": \"drowsiness\",\"color\": \"#721F27\"},{\"serieName\": \"unsafe lane change\",\"color\": \"#2F3947\"},{\"serieName\": \"hard corner\",\"color\": \"#049160\"},{\"serieName\": \"manual event\",\"color\": \"#BF982A\"},{\"serieName\": \"hard brake\",\"color\": \"#FF8142\"},{\"serieName\": \"tailgating\",\"color\": \"#FCC838\"},{\"serieName\": \"driver_facing_cam_obstruction\",\"color\": \"#82DFE9\"},{\"serieName\": \"road_facing_cam_obstruction\",\"color\": \"#82DFE9\"},{\"serieName\": \"Safety Event Counts\",\"color\": \"#06BF7F\"},{\"serieName\": \"hard accel above thres\",\"color\": \"#06BF7F\"},{\"serieName\": \"hard accel below thres\",\"color\": \"#FCD977\"},{\"serieName\": \"hard brake above thres\",\"color\": \"#82DFE9\"},{\"serieName\": \"hard brake below thres\",\"color\": \"#48D1E0\"},{\"serieName\": \"hard corner above thres\",\"color\": \"#71A1F4\"},{\"serieName\": \"hard corner below thres\",\"color\": \"#2E75F0\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: a48a040f-3105-43c1-8b73-fbff403db694
+  - id: Viz_6
+    answer:
+      name: Average Monthly Drive Score by Camera On/Off
+      tables:
+      - id: Fleet Drive Score with Dashcam Dates
+        name: Fleet Drive Score with Dashcam Dates
+        fqn: 51f3f134-1ff2-4c70-9eb7-fbff84bae80f
+      search_query: "[Score Week].monthly average [Drive Score] [Camera Flag]"
+      answer_columns:
+      - name: Average Drive Score
+      - name: Camera Flag
+      - name: Month(Score Week)
+      table:
+        table_columns:
+        - column_id: Average Drive Score
+          show_headline: false
+        - column_id: Camera Flag
+          show_headline: false
+        - column_id: Month(Score Week)
+          show_headline: false
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: LINE
+        chart_columns:
+        - column_id: Average Drive Score
+        - column_id: Camera Flag
+        - column_id: Month(Score Week)
+        axis_configs:
+        - x:
+          - Month(Score Week)
+          "y":
+          - Average Drive Score
+          color:
+          - Camera Flag
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"markersEnabled\": true,\"pivotSummariesState\": {}},\"showStackedLabels\": true,\"allLabels\": true},\"columnProperties\": [{\"columnId\": \"Month(Score Week)\",\"columnProperty\": {}},{\"columnId\": \"Camera Flag\",\"columnProperty\": {}},{\"columnId\": \"Average Drive Score\",\"columnProperty\": {\"dataLabels\": true}}],\"axisProperties\": [{\"id\": \"4eef5aa6-2cd4-44d1-963d-70113dd2382a\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Average Drive Score\"],\"isOpposite\": false}},{\"id\": \"51d371db-d7ec-415b-8057-cb8615e51556\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Month(Score Week)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Average Drive Score\",\"color\": \"#2E75F0\"},{\"serieName\": \"camera\",\"color\": \"#2E75F0\"},{\"serieName\": \"no camera\",\"color\": \"#48D1E0\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 30aab15c-7a07-4abe-a175-1f0ac38bc325
+  - id: Viz_7
+    answer:
+      name: Monthly Safety Events Count per 1M Miles
+      tables:
+      - id: Safety Events
+        name: Safety Events
+        fqn: 5c5e7ca2-ea19-423f-a2cb-65bb2aac1ed8
+      search_query: "[Event Date].monthly [Events per 1M Miles] [Event Types]"
+      answer_columns:
+      - name: Event Types
+      - name: Events per 1M Miles
+        format:
+          category: NUMBER
+          numberFormatConfig:
+            unit: NONE
+            decimals: 0.0
+            negativeValueFormat: PREFIX_DASH
+            toSeparateThousands: true
+          isCategoryEditable: true
+      - name: Month(Event Date)
+      table:
+        table_columns:
+        - column_id: Event Types
+          show_headline: false
+        - column_id: Events per 1M Miles
+          show_headline: false
+        - column_id: Month(Event Date)
+          show_headline: false
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Event Types
+        - column_id: Events per 1M Miles
+        - column_id: Month(Event Date)
+        axis_configs:
+        - x:
+          - Month(Event Date)
+          "y":
+          - Events per 1M Miles
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Events per 1M Miles\",\"columnProperty\": {}},{\"columnId\": \"Month(Event Date)\",\"columnProperty\": {}},{\"columnId\": \"Event Types\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"3aceef5b-560c-42be-abd4-f692ad42d09c\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Events per 1M Miles\"],\"isOpposite\": false}},{\"id\": \"3022a845-20f4-490b-8250-d3165e12e8aa\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Month(Event Date)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Events per 1M Miles\",\"color\": \"#06BF7F\"}],\"customColorSelectorArray\": [\"#F04152\",\"#06BF7F\",\"#F04152\",\"#747E8C\"]}"
+      display_mode: CHART_MODE
+    viz_guid: e4cac344-da0e-476e-9dd9-5cc4aa0b9bcb
+  - id: Viz_8
+    answer:
+      name: Event Count by State
+      tables:
+      - id: Driver Performance Event
+        name: Driver Performance Event
+        fqn: 190b522f-868b-474b-bb33-d28340829c02
+      search_query: "[Event Count] [State]"
+      answer_columns:
+      - name: Event Count
+      - name: State
+      table:
+        table_columns:
+        - column_id: Event Count
+          show_headline: false
+        - column_id: State
+          show_headline: false
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: GEO_AREA
+        chart_columns:
+        - column_id: Event Count
+        - column_id: State
+        axis_configs:
+        - x:
+          - State
+          "y":
+          - Event Count
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"mapviewport\": {\"center\": [-1.1601460387261175E7,6834301.428042107],\"zoomLevel\": 3.7959224257102484,\"extent\": [-2.0043147409761924E7,2142597.706771452,-3148502.75960942,1.1526005149312763E7]},\"chartSpecific\": {\"pivotSummariesState\": {}},\"showStackedLabels\": true,\"allLabels\": true},\"columnProperties\": [{\"columnId\": \"State\",\"columnProperty\": {}},{\"columnId\": \"Event Count\",\"columnProperty\": {\"dataLabels\": true}}],\"axisProperties\": [{\"id\": \"f3d7681c-8666-4e2b-b568-d41136ae6cc2\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Event Count\"],\"isOpposite\": false}},{\"id\": \"8d7f752b-06a7-4ae1-a1f3-22209885d057\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"State\"]}}],\"systemMultiColorSeriesColors\": [{\"serieName\": \"Event Count\",\"colorMap\": [{\"serieName\": \"State\",\"color\": [\"#ffffb2\",\"#fddd87\",\"#fba35d\",\"#f75534\",\"#f9140a\",\"#d70315\",\"#b10026\"]}]}]}"
+      display_mode: CHART_MODE
+    viz_guid: 1dd234a0-adb5-4800-bb2d-69a0a93cd5f4
+  - id: Viz_9
+    answer:
+      name: Average Fleet Drive Score by Weeks After Dashcam Activated
+      description: Looking into 0-26 weeks range
+      tables:
+      - id: Fleet Drive Score with Dashcam Dates
+        name: Fleet Drive Score with Dashcam Dates
+        fqn: 51f3f134-1ff2-4c70-9eb7-fbff84bae80f
+      search_query: "average [Drive Score] [Weeks After Dashcam Activated] [Weeks After Dashcam Activated] between [Weeks After Dashcam Activated].0 and [Weeks After Dashcam Activated].12"
+      answer_columns:
+      - name: Average Drive Score
+      - name: Weeks After Dashcam Activated
+      table:
+        table_columns:
+        - column_id: Average Drive Score
+          show_headline: false
+        - column_id: Weeks After Dashcam Activated
+          show_headline: false
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: LINE
+        chart_columns:
+        - column_id: Average Drive Score
+        - column_id: Weeks After Dashcam Activated
+        axis_configs:
+        - x:
+          - Weeks After Dashcam Activated
+          "y":
+          - Average Drive Score
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {\"xGridlineEnabled\": true,\"yGridlineEnabled\": true},\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"markersEnabled\": true,\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Weeks After Dashcam Activated\",\"columnProperty\": {}},{\"columnId\": \"Average Drive Score\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"9913f306-2f7b-490d-b81f-d90fdfeb1844\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Average Drive Score\"],\"isOpposite\": false}},{\"id\": \"2f1f690c-39e9-4cb9-a334-858bc25a1f50\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Weeks After Dashcam Activated\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Average Drive Score\",\"color\": \"#FCC838\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: b6f6ffbb-fdd3-4daa-980e-c58dfc6cc70b
+  - id: Viz_10
+    answer:
+      name: Safety Score - Top 10
+      tables:
+      - id: Fleet Drive Score with Dashcam Dates
+        name: Fleet Drive Score with Dashcam Dates
+        fqn: 51f3f134-1ff2-4c70-9eb7-fbff84bae80f
+      formulas:
+      - id: Average Drive Score Rounded
+        name: Average Drive Score Rounded
+        expr: "round ( average ( [Drive Score] ) , 1 )"
+        was_auto_generated: false
+      search_query: "[Fleet Account Name] [Average Drive Score Rounded] [Score Week] = 'last 6 months' top 10"
+      answer_columns:
+      - name: Average Drive Score Rounded
+      - name: Fleet Account Name
+      table:
+        table_columns:
+        - column_id: Average Drive Score Rounded
+          show_headline: false
+        - column_id: Fleet Account Name
+          show_headline: false
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: BAR
+        chart_columns:
+        - column_id: Average Drive Score Rounded
+        - column_id: Fleet Account Name
+        axis_configs:
+        - x:
+          - Fleet Account Name
+          "y":
+          - Average Drive Score Rounded
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {\"xGridlineEnabled\": false,\"yGridlineEnabled\": true},\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}},\"showStackedLabels\": true,\"allLabels\": true},\"columnProperties\": [{\"columnId\": \"Average Drive Score Rounded\",\"columnProperty\": {\"dataLabels\": true}},{\"columnId\": \"Fleet Account Name\",\"columnProperty\": {\"customProps\": \"{\\\"advancedProperties\\\":{\\\"dataLabels\\\":{\\\"backgroundColor\\\":\\\"\\\",\\\"borderColor\\\":\\\"\\\",\\\"borderWidth\\\":\\\"\\\",\\\"filter\\\":{\\\"operator\\\":\\\"\\\",\\\"value\\\":\\\"\\\"},\\\"align\\\":\\\"left\\\",\\\"style\\\":{\\\"fontSize\\\":\\\"12\\\",\\\"boldFontWeight\\\":false,\\\"underlineTextDecoration\\\":false,\\\"italicFontStyle\\\":false},\\\"maxCharacters\\\":\\\"\\\"}}}\"}}],\"axisProperties\": [{\"id\": \"f02c226b-12bc-4ce5-9dfc-095a460d48ab\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Average Drive Score Rounded\"],\"isOpposite\": false}},{\"id\": \"1eaee165-d470-4bf6-8ea6-1ba8450dd77b\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Fleet Account Name\"],\"customProps\": \"{\\\"advancedProperties\\\":{\\\"axisSettings\\\":{\\\"visible\\\":true,\\\"axisName\\\":{\\\"isAxisNameVisible\\\":true,\\\"fontSize\\\":\\\"12\\\",\\\"boldFontWeight\\\":false,\\\"underlineTextDecoration\\\":false,\\\"italicFontStyle\\\":false}},\\\"labels\\\":{\\\"enabled\\\":true,\\\"maxCharacters\\\":\\\"20\\\",\\\"fontSize\\\":\\\"12\\\",\\\"boldFontWeight\\\":false,\\\"underlineTextDecoration\\\":false,\\\"italicFontStyle\\\":false,\\\"wrap\\\":false},\\\"ticks\\\":{\\\"showTicks\\\":false,\\\"tickWidth\\\":\\\"1\\\",\\\"tickLength\\\":\\\"5\\\",\\\"tickColor\\\":\\\"\\\"}}}\"}}],\"seriesColors\": [{\"serieName\": \"rli insurance\",\"color\": \"#48D1E0\"},{\"serieName\": \"f240174b-db31-4e4a-9291-eff1c7027b54\",\"color\": \"#48D1E0\"},{\"serieName\": \"sentry insurance\",\"color\": \"#747E8C\"},{\"serieName\": \"Average Drive Score Rounded\",\"color\": \"#71A1F4\"}],\"systemSeriesColors\": [{\"serieName\": \"rli insurance\",\"color\": \"#48D1E0\"},{\"serieName\": \"f240174b-db31-4e4a-9291-eff1c7027b54\",\"color\": \"#48D1E0\"},{\"serieName\": \"sentry insurance\",\"color\": \"#747E8C\"},{\"serieName\": \"Average Drive Score Rounded\",\"color\": \"#06BF7F\"}],\"tooltipConfig\": {\"columnIds\": [\"Fleet Account Name\",\"Average Drive Score Rounded\"]}}"
+      display_mode: CHART_MODE
+    viz_guid: 55edd36b-eff1-4709-bb78-e200443eb4e5
+  - id: Viz_11
+    answer:
+      name: Safety Score - Bottom 10
+      tables:
+      - id: Fleet Drive Score with Dashcam Dates
+        name: Fleet Drive Score with Dashcam Dates
+        fqn: 51f3f134-1ff2-4c70-9eb7-fbff84bae80f
+      formulas:
+      - id: Average Drive Score Rounded
+        name: Average Drive Score Rounded
+        expr: "round ( average ( [Drive Score] ) , 1 )"
+        was_auto_generated: false
+      search_query: "[Fleet Account Name] [Average Drive Score Rounded] bottom 10"
+      answer_columns:
+      - name: Average Drive Score Rounded
+      - name: Fleet Account Name
+      table:
+        table_columns:
+        - column_id: Average Drive Score Rounded
+          show_headline: false
+        - column_id: Fleet Account Name
+          show_headline: false
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: BAR
+        chart_columns:
+        - column_id: Average Drive Score Rounded
+        - column_id: Fleet Account Name
+        axis_configs:
+        - x:
+          - Fleet Account Name
+          "y":
+          - Average Drive Score Rounded
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {\"xGridlineEnabled\": false,\"yGridlineEnabled\": true},\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}},\"showStackedLabels\": true,\"allLabels\": true},\"columnProperties\": [{\"columnId\": \"Average Drive Score Rounded\",\"columnProperty\": {\"dataLabels\": true}},{\"columnId\": \"Fleet Account Name\",\"columnProperty\": {\"customProps\": \"{\\\"advancedProperties\\\":{\\\"dataLabels\\\":{\\\"backgroundColor\\\":\\\"\\\",\\\"borderColor\\\":\\\"\\\",\\\"borderWidth\\\":\\\"\\\",\\\"filter\\\":{\\\"operator\\\":\\\"\\\",\\\"value\\\":\\\"\\\"},\\\"align\\\":\\\"left\\\",\\\"style\\\":{\\\"fontSize\\\":\\\"12\\\",\\\"boldFontWeight\\\":false,\\\"underlineTextDecoration\\\":false,\\\"italicFontStyle\\\":false},\\\"maxCharacters\\\":\\\"\\\"}}}\"}}],\"axisProperties\": [{\"id\": \"f02c226b-12bc-4ce5-9dfc-095a460d48ab\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Average Drive Score Rounded\"],\"isOpposite\": false}},{\"id\": \"1eaee165-d470-4bf6-8ea6-1ba8450dd77b\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Fleet Account Name\"],\"customProps\": \"{\\\"advancedProperties\\\":{\\\"axisSettings\\\":{\\\"visible\\\":true,\\\"axisName\\\":{\\\"isAxisNameVisible\\\":true,\\\"fontSize\\\":\\\"12\\\",\\\"boldFontWeight\\\":false,\\\"underlineTextDecoration\\\":false,\\\"italicFontStyle\\\":false}},\\\"labels\\\":{\\\"enabled\\\":true,\\\"maxCharacters\\\":\\\"20\\\",\\\"fontSize\\\":\\\"12\\\",\\\"boldFontWeight\\\":false,\\\"underlineTextDecoration\\\":false,\\\"italicFontStyle\\\":false,\\\"wrap\\\":false},\\\"ticks\\\":{\\\"showTicks\\\":false,\\\"tickWidth\\\":\\\"1\\\",\\\"tickLength\\\":\\\"5\\\",\\\"tickColor\\\":\\\"\\\"}}}\"}}],\"seriesColors\": [{\"serieName\": \"rli insurance\",\"color\": \"#48D1E0\"},{\"serieName\": \"f240174b-db31-4e4a-9291-eff1c7027b54\",\"color\": \"#48D1E0\"},{\"serieName\": \"{null}\",\"color\": \"#8C62F5\"},{\"serieName\": \"Average Drive Score Rounded\",\"color\": \"#FFA97E\"}],\"systemSeriesColors\": [{\"serieName\": \"rli insurance\",\"color\": \"#48D1E0\"},{\"serieName\": \"f240174b-db31-4e4a-9291-eff1c7027b54\",\"color\": \"#48D1E0\"},{\"serieName\": \"{null}\",\"color\": \"#8C62F5\"},{\"serieName\": \"Average Drive Score Rounded\",\"color\": \"#FCC838\"}],\"tooltipConfig\": {\"columnIds\": [\"Fleet Account Name\",\"Average Drive Score Rounded\"]}}"
+      display_mode: CHART_MODE
+    viz_guid: 3cb52281-696f-4660-a4a6-c9183f80609f
+  - id: Viz_12
+    answer:
+      name: "Lowest # of Safety Events"
+      tables:
+      - id: Safety Events
+        name: Safety Events
+        fqn: 5c5e7ca2-ea19-423f-a2cb-65bb2aac1ed8
+      search_query: "[Safety Event Counts] [Fleet Account Name] bottom 10"
+      answer_columns:
+      - name: Fleet Account Name
+      - name: Safety Event Counts
+      table:
+        table_columns:
+        - column_id: Fleet Account Name
+          show_headline: false
+        - column_id: Safety Event Counts
+          show_headline: false
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: BAR
+        chart_columns:
+        - column_id: Fleet Account Name
+        - column_id: Safety Event Counts
+        axis_configs:
+        - x:
+          - Fleet Account Name
+          "y":
+          - Safety Event Counts
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Safety Event Counts\",\"columnProperty\": {\"dataLabels\": true}},{\"columnId\": \"Fleet Account Name\",\"columnProperty\": {\"customProps\": \"{\\\"advancedProperties\\\":{\\\"dataLabels\\\":{\\\"backgroundColor\\\":\\\"\\\",\\\"borderColor\\\":\\\"\\\",\\\"borderWidth\\\":\\\"\\\",\\\"filter\\\":{\\\"operator\\\":\\\"\\\",\\\"value\\\":\\\"\\\"},\\\"align\\\":\\\"left\\\",\\\"style\\\":{\\\"fontSize\\\":\\\"12\\\",\\\"boldFontWeight\\\":false,\\\"underlineTextDecoration\\\":false,\\\"italicFontStyle\\\":false},\\\"maxCharacters\\\":\\\"\\\"}}}\"}}],\"axisProperties\": [{\"id\": \"7e797f9a-0626-4832-aece-96ef8baa2f05\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Safety Event Counts\"],\"isOpposite\": false}},{\"id\": \"75a039fb-70b4-4f15-a9aa-0744b3ab92ab\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Fleet Account Name\"],\"customProps\": \"{\\\"advancedProperties\\\":{\\\"axisSettings\\\":{\\\"visible\\\":true,\\\"axisName\\\":{\\\"isAxisNameVisible\\\":true,\\\"fontSize\\\":\\\"12\\\",\\\"boldFontWeight\\\":false,\\\"underlineTextDecoration\\\":false,\\\"italicFontStyle\\\":false}},\\\"labels\\\":{\\\"enabled\\\":true,\\\"maxCharacters\\\":\\\"20\\\",\\\"fontSize\\\":\\\"12\\\",\\\"boldFontWeight\\\":false,\\\"underlineTextDecoration\\\":false,\\\"italicFontStyle\\\":false,\\\"wrap\\\":false},\\\"ticks\\\":{\\\"showTicks\\\":false,\\\"tickWidth\\\":\\\"1\\\",\\\"tickLength\\\":\\\"5\\\",\\\"tickColor\\\":\\\"\\\"}}}\"}}],\"seriesColors\": [{\"serieName\": \"7bc6a733-bd38-4896-8bcb-ed19286963ae\",\"color\": \"#06BF7F\"},{\"serieName\": \"d3319359-f4a3-4b77-8442-afaa1a3945b4\",\"color\": \"#FCC838\"},{\"serieName\": \"9f890041-51be-4629-a3a6-7c618d7740c0\",\"color\": \"#71A1F4\"}],\"systemSeriesColors\": [{\"serieName\": \"7bc6a733-bd38-4896-8bcb-ed19286963ae\",\"color\": \"#06BF7F\"},{\"serieName\": \"d3319359-f4a3-4b77-8442-afaa1a3945b4\",\"color\": \"#FCC838\"},{\"serieName\": \"9f890041-51be-4629-a3a6-7c618d7740c0\",\"color\": \"#71A1F4\"},{\"serieName\": \"Safety Event Counts\",\"color\": \"#FCC838\"}],\"tooltipConfig\": {\"columnIds\": [\"Fleet Account Name\",\"Safety Event Counts\"]}}"
+      display_mode: CHART_MODE
+    viz_guid: 43d66b19-bd05-45e9-a7f5-3b8b649c7503
+  - id: Viz_13
+    answer:
+      name: "Highest # of Safety Events"
+      tables:
+      - id: Safety Events
+        name: Safety Events
+        fqn: 5c5e7ca2-ea19-423f-a2cb-65bb2aac1ed8
+      search_query: "[Safety Event Counts] [Fleet Account Name] top 10 [Fleet Account Name] != '{Null}'"
+      answer_columns:
+      - name: Fleet Account Name
+      - name: Safety Event Counts
+      table:
+        table_columns:
+        - column_id: Fleet Account Name
+          show_headline: false
+        - column_id: Safety Event Counts
+          show_headline: false
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: BAR
+        chart_columns:
+        - column_id: Fleet Account Name
+        - column_id: Safety Event Counts
+        axis_configs:
+        - x:
+          - Fleet Account Name
+          "y":
+          - Safety Event Counts
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}},\"showStackedLabels\": false,\"allLabels\": false},\"columnProperties\": [{\"columnId\": \"Fleet Account Name\",\"columnProperty\": {\"customProps\": \"{\\\"advancedProperties\\\":{\\\"dataLabels\\\":{\\\"backgroundColor\\\":\\\"\\\",\\\"borderColor\\\":\\\"\\\",\\\"borderWidth\\\":\\\"\\\",\\\"filter\\\":{\\\"operator\\\":\\\"\\\",\\\"value\\\":\\\"\\\"},\\\"align\\\":\\\"left\\\",\\\"style\\\":{\\\"fontSize\\\":\\\"12\\\",\\\"boldFontWeight\\\":false,\\\"underlineTextDecoration\\\":false,\\\"italicFontStyle\\\":false},\\\"maxCharacters\\\":\\\"\\\"}}}\"}},{\"columnId\": \"Safety Event Counts\",\"columnProperty\": {\"dataLabels\": true}}],\"axisProperties\": [{\"id\": \"4c089580-f495-470b-b9e7-5e042d8edbdc\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Safety Event Counts\"],\"isOpposite\": false}},{\"id\": \"9b238dfd-ed19-4aa8-b619-7d165e98faf6\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Fleet Account Name\"],\"customProps\": \"{\\\"advancedProperties\\\":{\\\"axisSettings\\\":{\\\"visible\\\":true,\\\"axisName\\\":{\\\"isAxisNameVisible\\\":true,\\\"fontSize\\\":\\\"12\\\",\\\"boldFontWeight\\\":false,\\\"underlineTextDecoration\\\":false,\\\"italicFontStyle\\\":false}},\\\"labels\\\":{\\\"enabled\\\":true,\\\"maxCharacters\\\":\\\"20\\\",\\\"fontSize\\\":\\\"12\\\",\\\"boldFontWeight\\\":false,\\\"underlineTextDecoration\\\":false,\\\"italicFontStyle\\\":false,\\\"wrap\\\":false},\\\"ticks\\\":{\\\"showTicks\\\":false,\\\"tickWidth\\\":\\\"1\\\",\\\"tickLength\\\":\\\"5\\\",\\\"tickColor\\\":\\\"\\\"}}}\"}}],\"seriesColors\": [{\"serieName\": \"7bc6a733-bd38-4896-8bcb-ed19286963ae\",\"color\": \"#06BF7F\"},{\"serieName\": \"d3319359-f4a3-4b77-8442-afaa1a3945b4\",\"color\": \"#FCC838\"},{\"serieName\": \"a76d160b-f1ef-4b58-b410-d5bd56e1cec9\",\"color\": \"#FFA97E\"}],\"systemSeriesColors\": [{\"serieName\": \"7bc6a733-bd38-4896-8bcb-ed19286963ae\",\"color\": \"#06BF7F\"},{\"serieName\": \"d3319359-f4a3-4b77-8442-afaa1a3945b4\",\"color\": \"#FCC838\"},{\"serieName\": \"a76d160b-f1ef-4b58-b410-d5bd56e1cec9\",\"color\": \"#FFA97E\"},{\"serieName\": \"Safety Event Counts\",\"color\": \"#747E8C\"}],\"tooltipConfig\": {\"columnIds\": [\"Fleet Account Name\",\"Safety Event Counts\"]}}"
+      display_mode: CHART_MODE
+    viz_guid: ea1fbf9c-4563-46c5-a2f0-7860478cd84f
+  - id: Viz_14
+    viz_guid: 75a09fc6-e7d0-4c91-b4dc-c88cf77bfb92
+    note_tile:
+      html_parsed_string: <h1><span>Executive Summary</span></h1>
+  - id: Viz_15
+    answer:
+      name: Average Monthly Fleet DRIVE Score Trend
+      tables:
+      - id: Fleet Drive Score with Dashcam Dates
+        name: Fleet Drive Score with Dashcam Dates
+        fqn: 51f3f134-1ff2-4c70-9eb7-fbff84bae80f
+      search_query: "average [Drive Score] [Score Week] = 'last 6 months' [Score Week].weekly"
+      answer_columns:
+      - name: Average Drive Score
+      - name: Week(Score Week)
+      table:
+        table_columns:
+        - column_id: Average Drive Score
+          show_headline: false
+        - column_id: Week(Score Week)
+          show_headline: false
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Average Drive Score
+        - column_id: Week(Score Week)
+        axis_configs:
+        - x:
+          - Week(Score Week)
+          "y":
+          - Average Drive Score
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"markersEnabled\": true,\"pivotSummariesState\": {}},\"showStackedLabels\": true,\"allLabels\": true},\"columnProperties\": [{\"columnId\": \"Average Drive Score\",\"columnProperty\": {\"dataLabels\": true}},{\"columnId\": \"Week(Score Week)\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"f211d70d-1972-44e4-9b9a-1ad55dd383c1\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Average Drive Score\"],\"isOpposite\": false}},{\"id\": \"27485aa0-3819-48eb-bb14-817f567509e8\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Week(Score Week)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Average Drive Score\",\"color\": \"#2770ef\"}],\"tooltipConfig\": {}}"
+      display_mode: CHART_MODE
+    viz_guid: 2da5bc8f-69f7-459d-b3c1-a13be116097c
+  - id: Viz_16
+    viz_guid: 75b9b1ba-6af6-4f7a-829d-804d6ff2aed5
+    note_tile:
+      html_parsed_string: <h1 dir="ltr"><span>Camera Activation</span></h1>
+  - id: Viz_17
+    viz_guid: 802392d9-451e-4225-b13a-4ab0acd41c65
+    note_tile:
+      html_parsed_string: "<h1 dir=\"ltr\"><span style=\"white-space: pre-wrap;\">Events by Geography and Time of Day</span></h1>"
+  - id: Viz_18
+    viz_guid: e9eb7c95-4dd4-435f-88a5-607945409953
+    note_tile:
+      html_parsed_string: "<h1 dir=\"ltr\"><span>Event definitions</span></h1><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><a href=\"https://helpcenter.gomotive.com/hc/en-us/articles/6176003080861-What-is-Event-Severity-\" target=\"_blank\" rel=\"noopener\" class=\"theme-module__editor-link\"><span>Event Severity Resource</span></a></p><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><a href=\"https://helpcenter.gomotive.com/hc/en-us/articles/6162164321693-What-is-DRIVE-Risk-Score-\" target=\"_blank\" rel=\"noopener\" class=\"theme-module__editor-link\"><span>DRIVE Score Defined</span></a></p><table class=\"theme-module__editor-table\"><colgroup><col><col><col><col></colgroup><tbody><tr><th class=\"theme-module__editor-table-cell theme-module__editor-table-cell-header\"><h2 dir=\"ltr\"><b><strong class=\"theme-module__editor-text-bold\">Only Detectable by AI Camera</strong></b></h2></th><th class=\"theme-module__editor-table-cell theme-module__editor-table-cell-header\"><h2 dir=\"ltr\"><b><strong class=\"theme-module__editor-text-bold\">Definition</strong></b></h2></th><th class=\"theme-module__editor-table-cell theme-module__editor-table-cell-header\"><h2 dir=\"ltr\"><b><strong class=\"theme-module__editor-text-bold\">Event Generation trigger definition</strong></b></h2></th><th class=\"theme-module__editor-table-cell theme-module__editor-table-cell-header\"><h2 dir=\"ltr\"><b><strong class=\"theme-module__editor-text-bold\">Status/ETA</strong></b></h2></th></tr><tr><th class=\"theme-module__editor-table-cell theme-module__editor-table-cell-header\"><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><span>Tailgating / Close following</span></p></th><td class=\"theme-module__editor-table-cell\"><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><span>Tailgating other vehicles with a close following distance</span></p></td><th class=\"theme-module__editor-table-cell theme-module__editor-table-cell-header\"><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><span>Following distance is 0.7s maintained for at least 15s above 35 mph</span></p></th><td class=\"theme-module__editor-table-cell\"><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><span>GA</span></p></td></tr><tr><th class=\"theme-module__editor-table-cell theme-module__editor-table-cell-header\"><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><span>Unsafe Lane Change</span></p></th><td class=\"theme-module__editor-table-cell\"><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><span>Driver is following a vehicle too closely before or after a lane change</span></p></td><th class=\"theme-module__editor-table-cell theme-module__editor-table-cell-header\"><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><span>Close Following a vehicle at 0.5-sec time-to-hit for 3-sec before or after a lane change, above 30mph</span></p></th><td class=\"theme-module__editor-table-cell\"><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><span>GA</span></p></td></tr><tr><th class=\"theme-module__editor-table-cell theme-module__editor-table-cell-header\"><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><span>Stop Sign Violation</span></p></th><td class=\"theme-module__editor-table-cell\"><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><span>Rolling stop at stop signs (a full stop is 3s at 0 mph) and is a ticketable traffic violation.</span></p></td><th class=\"theme-module__editor-table-cell theme-module__editor-table-cell-header\"><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><span>When approaching a stop sign, we will trigger an event if speed doesn’t go below 6mph within 7s of stop sign being invisible to camera</span></p></th><td class=\"theme-module__editor-table-cell\"><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><span>GA</span></p></td></tr><tr><th class=\"theme-module__editor-table-cell theme-module__editor-table-cell-header\"><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><span>Camera Obstruction</span></p></th><td class=\"theme-module__editor-table-cell\"><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><span>Detect when the road or driver-facing camera is obstructed by a physical object or when the camera is not installed correctly. Obstructed Camera also functions as a new Dashcam status defined as “Obstructed Camera”.</span></p></td><th class=\"theme-module__editor-table-cell theme-module__editor-table-cell-header\"><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><span>- Road or driver-facing lens is obstructed for 30-seconds or more while driving 15mph or above</span></p></th><td class=\"theme-module__editor-table-cell\"><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><span>BETA - GA April 2024</span></p></td></tr><tr><th class=\"theme-module__editor-table-cell theme-module__editor-table-cell-header\"><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><span>Forward Collision Warning</span></p></th><td class=\"theme-module__editor-table-cell\"><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><span>Detect &amp; notify a driver when their speed to distance ratio falls below a driver response time of 2.2 seconds while traveling 25mph or above</span></p></td><th class=\"theme-module__editor-table-cell theme-module__editor-table-cell-header\"><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><span>- Driver response time falls below 2.2-seconds in relation to a vehicle or object ahead while traveling above 25 mph</span></p></th><td class=\"theme-module__editor-table-cell\"><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><span>BETA - GA June 2024</span></p></td></tr><tr><th class=\"theme-module__editor-table-cell theme-module__editor-table-cell-header\"><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><span>Lane Swerving</span></p></th><td class=\"theme-module__editor-table-cell\"><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><span>Detection of a driver swerving out and back into a lane multiple times over a period of time to monitor driver fatigue or innatentiveness with a RF dashcams</span></p></td><th class=\"theme-module__editor-table-cell theme-module__editor-table-cell-header\"><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><span>- Driver swerves 2 times within a 5-minute period above 25mph</span></p></th><td class=\"theme-module__editor-table-cell\"><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><span>In development, GA Q3 or Q4</span></p></td></tr><tr><th class=\"theme-module__editor-table-cell theme-module__editor-table-cell-header\"><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><span>Unsafe Parking</span></p></th><td class=\"theme-module__editor-table-cell\"><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><span>Vehicle is parked on the side of the road in a hazard lane for an unsafe period of time.</span></p></td><th class=\"theme-module__editor-table-cell theme-module__editor-table-cell-header\"><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><span>Vehicle is parked in a hazard lane for X minutes (TBD)</span></p></th><td class=\"theme-module__editor-table-cell\"><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><span>In development, GA Q3 or Q4</span></p></td></tr><tr><th class=\"theme-module__editor-table-cell theme-module__editor-table-cell-header\"><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><span>Safe Distance (TBD on name)</span></p></th><td class=\"theme-module__editor-table-cell\"><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><span>Identify and positively alert drivers whenever they create distance between themselves and a Third Party Vehicle (TPV) after being cutoff</span></p></td><th class=\"theme-module__editor-table-cell theme-module__editor-table-cell-header\"><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><span>TBD</span></p></th><td class=\"theme-module__editor-table-cell\"><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><span>In development, GA Q3 or Q4</span></p></td></tr><tr><th class=\"theme-module__editor-table-cell theme-module__editor-table-cell-header\"><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><span>Red Light Violation</span></p></th><td class=\"theme-module__editor-table-cell\"><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><span>Detect when a vehicle runs a red light</span></p></td><th class=\"theme-module__editor-table-cell theme-module__editor-table-cell-header\"><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><span>TBD</span></p></th><td class=\"theme-module__editor-table-cell\"><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><span>Not started, BETA Q4</span></p></td></tr><tr><th class=\"theme-module__editor-table-cell theme-module__editor-table-cell-header\"><h2 dir=\"ltr\"><b><strong class=\"theme-module__editor-text-bold\">Only Detectable by Dual Facing AI Camera</strong></b></h2></th><td class=\"theme-module__editor-table-cell\"><h2 dir=\"ltr\"><span>Definition</span></h2></td><th class=\"theme-module__editor-table-cell theme-module__editor-table-cell-header\"><h2 dir=\"ltr\"><b><strong class=\"theme-module__editor-text-bold\">Event Generation trigger definition</strong></b></h2></th><td class=\"theme-module__editor-table-cell\"><h2 dir=\"ltr\"><b><strong class=\"theme-module__editor-text-bold\">Status/ETA</strong></b></h2></td></tr><tr><th class=\"theme-module__editor-table-cell theme-module__editor-table-cell-header\"><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><span>Cell Phone Use</span></p></th><td class=\"theme-module__editor-table-cell\"><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><span>Using, holding or looking down at a cell phone while driving (not in a holder)</span></p></td><th class=\"theme-module__editor-table-cell theme-module__editor-table-cell-header\"><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><span>Using a phone for at least 5s above 25 mph</span></p></th><td class=\"theme-module__editor-table-cell\"><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><span>GA</span></p></td></tr><tr><th class=\"theme-module__editor-table-cell theme-module__editor-table-cell-header\"><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><span>Seat Belt Violation</span></p></th><td class=\"theme-module__editor-table-cell\"><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><span>Seatbelt is not worn over properly over the shoulder</span></p></td><th class=\"theme-module__editor-table-cell theme-module__editor-table-cell-header\"><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><span>Seatbelt is unbuckled for at least 5s above 25mph</span></p></th><td class=\"theme-module__editor-table-cell\"><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><span>GA</span></p></td></tr><tr><th class=\"theme-module__editor-table-cell theme-module__editor-table-cell-header\"><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><span>Distraction</span></p></th><td class=\"theme-module__editor-table-cell\"><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><span>Driver is not looking straight (down) due to distraction from, food/drink, drowsiness or something else (not cell phones)</span></p></td><th class=\"theme-module__editor-table-cell theme-module__editor-table-cell-header\"><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><span>Looking down for at least 5s above 10mph</span></p></th><td class=\"theme-module__editor-table-cell\"><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><span>GA</span></p></td></tr><tr><td class=\"theme-module__editor-table-cell\"><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><span>Drowsiness - Excessive Yawning</span></p></td><td class=\"theme-module__editor-table-cell\"><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><span>Driver is yawning excessivle</span></p></td><td class=\"theme-module__editor-table-cell\"><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><span>- 2-Yawns w/in 2-mins @ 25mph or above</span></p><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><span>- 1-Distraction event &amp; 1-Yawn w/in 2-mins @ 25mph or above</span></p></td><td class=\"theme-module__editor-table-cell\"><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><span>BETA - GA April 2024</span></p></td></tr><tr><td class=\"theme-module__editor-table-cell\"><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><span>Drowsiness - Eyes Closed</span></p></td><td class=\"theme-module__editor-table-cell\"><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><span>Driver is yawning, dozing off</span></p></td><td class=\"theme-module__editor-table-cell\"><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><span>- Eyes closed for 2.5 seconds @ 25mph or above</span></p></td><td class=\"theme-module__editor-table-cell\"><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><span>BETA - GA May or June 2024</span></p></td></tr><tr><td class=\"theme-module__editor-table-cell\"><h2 dir=\"ltr\"><span>Gateway:</span></h2></td><td class=\"theme-module__editor-table-cell\"><h2 dir=\"ltr\"><span>Definition</span></h2></td><td class=\"theme-module__editor-table-cell\"><h2 dir=\"ltr\"><span>Event Generation trigger definition</span></h2></td><td class=\"theme-module__editor-table-cell\"><span>Status</span></td></tr><tr><td class=\"theme-module__editor-table-cell\"><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><span>Hard Brake</span></p></td><td class=\"theme-module__editor-table-cell\"><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><span>A sudden change in the direction or speed of a vehicle where more force than normal is applied to the vehicle's brake/ accelerator system or a turn occurs too fast.</span></p></td><td class=\"theme-module__editor-table-cell\"><span>Based on a minimum set threshold that varies by vehicle class as follows:Light duty: minimum set threshold between 9.65 mph/s and 12.28 mph/s (0.44g - 0.56g)Medium duty: minimum set threshold between 8.34 mph/s and 10.97 mph/s (0.38g - 0.50g)Heavy duty: minimum set threshold between 7.46 mph/s and 10.09 mph/s (0.34g - 0.46g)</span></td><td class=\"theme-module__editor-table-cell\"><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><span>GA</span></p></td></tr><tr><td class=\"theme-module__editor-table-cell\"><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><span>Hard Corner</span></p></td><td class=\"theme-module__editor-table-cell\"><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><span>A sudden change in the direction or speed of a vehicle where more force than normal is applied to the vehicle's brake/ accelerator system or a turn occurs too fast.</span></p></td><td class=\"theme-module__editor-table-cell\"><span>Based on a minimum set threshold that varies by vehicle class as follows:Light duty: minimum set threshold between 9.65 mph/s and 12.28 mph/s (0.44g - 0.56g)Medium duty: minimum set threshold between 9.21 mph/s and 11.85 mph/s (0.42g - 0.54g)Heavy duty: minimum set threshold between 8.77 mph/s and 11.41 mph/s (0.40g - 0.52g)</span></td><td class=\"theme-module__editor-table-cell\"><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><span>GA</span></p></td></tr><tr><td class=\"theme-module__editor-table-cell\"><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><span>Hard Acceleration</span></p></td><td class=\"theme-module__editor-table-cell\"><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><span>A sudden change in the direction or speed of a vehicle where more force than normal is applied to the vehicle's brake/ accelerator system or a turn occurs too fast.</span></p></td><td class=\"theme-module__editor-table-cell\"><span>Based on a minimum set threshold that varies by vehicle class as follows:Light duty: minimum set threshold between 9.65 mph/s and 12.28 mph/s (0.44g - 0.56g)Medium duty: minimum set threshold between 8.99 mph/s and 11.63 mph/s (0.41g - 0.53g)Heavy duty: minimum set threshold between 8.34 mph/s and 10.97 mph/s (0.38g - 0.50g)</span></td><td class=\"theme-module__editor-table-cell\"><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><span>GA</span></p></td></tr><tr><td class=\"theme-module__editor-table-cell\"><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><span>Speeding</span></p></td><td class=\"theme-module__editor-table-cell\"><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><span>Speeding occurs when a driver drives over the posted speed limit on a road</span></p></td><td class=\"theme-module__editor-table-cell\"><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><span>Vehicle drives 6 mph over the posted speed limit for more than 1 minute</span></p></td><td class=\"theme-module__editor-table-cell\"><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><span>GA</span></p></td></tr><tr><td class=\"theme-module__editor-table-cell\"><h2 dir=\"ltr\"><span>Annotations Team Only</span></h2></td><td class=\"theme-module__editor-table-cell\"><h2 dir=\"ltr\"><span>Definition</span></h2></td><td class=\"theme-module__editor-table-cell\"><h2 dir=\"ltr\"><span>Customizable</span></h2></td><td class=\"theme-module__editor-table-cell\"><h2 dir=\"ltr\"><span>Status</span></h2></td></tr><tr><td class=\"theme-module__editor-table-cell\"><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><span>Camera Installation</span></p></td><td class=\"theme-module__editor-table-cell\"><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><span>Tag added when the camera is installed in a manner that restricts the line of sight to the road or driver (ex. tilted)</span></p></td><td class=\"theme-module__editor-table-cell\"></td><td class=\"theme-module__editor-table-cell\"><span>GA</span></td></tr><tr><td class=\"theme-module__editor-table-cell\"><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><span>Camera Obstruction (smart DCs only)</span></p></td><td class=\"theme-module__editor-table-cell\"><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><span>Tag added when physical obsructions are observed during a safety event video review</span></p></td><td class=\"theme-module__editor-table-cell\"></td><td class=\"theme-module__editor-table-cell\"><span>GA</span></td></tr><tr><td class=\"theme-module__editor-table-cell\"><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><span>Smoking</span></p></td><td class=\"theme-module__editor-table-cell\"><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><span>Tag added when a driver is observed smoking in the vehicle</span></p></td><td class=\"theme-module__editor-table-cell\"><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><span>Can be disabled by account</span></p></td><td class=\"theme-module__editor-table-cell\"><span>GA</span></td></tr><tr><td class=\"theme-module__editor-table-cell\"><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><span>Ran Red Light</span></p></td><td class=\"theme-module__editor-table-cell\"><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><span>Tag added when a vehicle runs a red light</span></p></td><td class=\"theme-module__editor-table-cell\"><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><span>Can be disabled by account</span></p></td><td class=\"theme-module__editor-table-cell\"><span>GA</span></td></tr><tr><td class=\"theme-module__editor-table-cell\"><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><span>Lane Cutoff</span></p></td><td class=\"theme-module__editor-table-cell\"><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><span>Tag added when a driver is observed to be cutoff</span></p></td><td class=\"theme-module__editor-table-cell\"><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><span>Can be disabled by account</span></p></td><td class=\"theme-module__editor-table-cell\"><span>GA</span></td></tr><tr><td class=\"theme-module__editor-table-cell\"><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><span>Near Collision</span></p></td><td class=\"theme-module__editor-table-cell\"><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><span>Tag added when a safety event video observes a vehicle that avoided a collision</span></p></td><td class=\"theme-module__editor-table-cell\"></td><td class=\"theme-module__editor-table-cell\"><span>GA</span></td></tr><tr><td class=\"theme-module__editor-table-cell\"><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><span>Collision</span></p></td><td class=\"theme-module__editor-table-cell\"><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><span>Tag added on an observed collision from an ancillary safety event video, or when reviewing a collision specific event type</span></p></td><td class=\"theme-module__editor-table-cell\"></td><td class=\"theme-module__editor-table-cell\"><span>GA</span></td></tr></tbody></table><h1 dir=\"ltr\"><br></h1>"
+  - id: Viz_19
+    answer:
+      name: Events by Month After Dashcam Activated
+      tables:
+      - id: Safety Events
+        name: Safety Events
+        fqn: 5c5e7ca2-ea19-423f-a2cb-65bb2aac1ed8
+      search_query: "[Months After Dashcam Activated] [Safety Event Counts] [Months After Dashcam Activated] <= 3 sort by [Months After Dashcam Activated] [Fleet Account Name] [Event Types] [Months After Dashcam Activated] > -1"
+      answer_columns:
+      - name: Event Types
+      - name: Fleet Account Name
+      - name: Months After Dashcam Activated
+      - name: Safety Event Counts
+      table:
+        table_columns:
+        - column_id: Event Types
+          show_headline: false
+        - column_id: Fleet Account Name
+          show_headline: false
+        - column_id: Months After Dashcam Activated
+          show_headline: false
+        - column_id: Safety Event Counts
+          show_headline: false
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"widthState\": [{\"columnId\": \"Months After Dashcam Activated\",\"width\": 166.15682983398438},{\"columnId\": \"Fleet Account Name\",\"width\": 253.0}]}"
+      chart:
+        type: STACKED_COLUMN
+        chart_columns:
+        - column_id: Event Types
+        - column_id: Fleet Account Name
+        - column_id: Months After Dashcam Activated
+        - column_id: Safety Event Counts
+        axis_configs:
+        - x:
+          - Event Types
+          "y":
+          - Safety Event Counts
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Months After Dashcam Activated\",\"columnProperty\": {}},{\"columnId\": \"Fleet Account Name\",\"columnProperty\": {}},{\"columnId\": \"Event Types\",\"columnProperty\": {}},{\"columnId\": \"Safety Event Counts\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"5188f238-7e4b-4a3a-ada7-eba0ccb3ccf7\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Safety Event Counts\"],\"isOpposite\": false}},{\"id\": \"ff9c0fee-7550-431d-ba79-1083b30f4f7c\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Event Types\"]}}],\"systemSeriesColors\": [{\"serieName\": \"9ba2c83e-754f-4c6a-8f2a-6dce399aa55c\",\"color\": \"#06BF7F\"},{\"serieName\": \"1d0beb84-492b-44a0-8378-f9e999349acb\",\"color\": \"#FCC838\"},{\"serieName\": \"c86885ee-7fae-4d20-9d1b-672a03b87e48\",\"color\": \"#FF8142\"},{\"serieName\": \"cell phone\",\"color\": \"#B094F8\"},{\"serieName\": \"crash\",\"color\": \"#8C62F5\"},{\"serieName\": \"distraction\",\"color\": \"#56D3A8\"},{\"serieName\": \"hard accel\",\"color\": \"#06BF7F\"},{\"serieName\": \"hard brake\",\"color\": \"#FCD977\"},{\"serieName\": \"hard corner\",\"color\": \"#FCC838\"},{\"serieName\": \"manual event\",\"color\": \"#82DFE9\"},{\"serieName\": \"seat belt violation\",\"color\": \"#48D1E0\"},{\"serieName\": \"stop sign violation\",\"color\": \"#2359B6\"},{\"serieName\": \"tailgating\",\"color\": \"#71A1F4\"},{\"serieName\": \"unsafe lane change\",\"color\": \"#2E75F0\"},{\"serieName\": \"9aff1299-0b2e-4bbd-99aa-eaf5320b5a62\",\"color\": \"#48D1E0\"},{\"serieName\": \"Safety Event Counts\",\"color\": \"#FCC838\"}],\"tooltipConfig\": {}}"
+      display_mode: CHART_MODE
+    viz_guid: a7374577-e9f9-4c43-aa2e-ae0752ec27d0
+  - id: Viz_20
+    answer:
+      name: Events Per MM After Dashcam Activated
+      tables:
+      - id: Safety Events
+        name: Safety Events
+        fqn: 5c5e7ca2-ea19-423f-a2cb-65bb2aac1ed8
+      search_query: "[Months After Dashcam Activated] [Events per 1M Miles] [Months After Dashcam Activated] <= 3 sort by [Months After Dashcam Activated] [Fleet Account Name] [Event Types] [Months After Dashcam Activated] != -1 [Months After Dashcam Activated] > 0"
+      answer_columns:
+      - name: Event Types
+      - name: Events per 1M Miles
+      - name: Fleet Account Name
+      - name: Months After Dashcam Activated
+      table:
+        table_columns:
+        - column_id: Event Types
+          show_headline: false
+        - column_id: Events per 1M Miles
+          show_headline: false
+        - column_id: Fleet Account Name
+          show_headline: false
+        - column_id: Months After Dashcam Activated
+          show_headline: false
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"widthState\": [{\"columnId\": \"Months After Dashcam Activated\",\"width\": 166.15682983398438},{\"columnId\": \"Fleet Account Name\",\"width\": 253.0}]}"
+      chart:
+        type: STACKED_COLUMN
+        chart_columns:
+        - column_id: Event Types
+        - column_id: Events per 1M Miles
+        - column_id: Fleet Account Name
+        - column_id: Months After Dashcam Activated
+        axis_configs:
+        - x:
+          - Months After Dashcam Activated
+          "y":
+          - Events per 1M Miles
+          color:
+          - Event Types
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Months After Dashcam Activated\",\"columnProperty\": {}},{\"columnId\": \"Fleet Account Name\",\"columnProperty\": {}},{\"columnId\": \"Event Types\",\"columnProperty\": {}},{\"columnId\": \"Events per 1M Miles\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"bdcc1c38-fe42-4bc1-994d-51b327040e5c\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Events per 1M Miles\"],\"isOpposite\": false}},{\"id\": \"21d614b1-7ae6-46ed-89bd-5ec2d33bbd59\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Months After Dashcam Activated\"]}}],\"systemSeriesColors\": [{\"serieName\": \"9ba2c83e-754f-4c6a-8f2a-6dce399aa55c\",\"color\": \"#06BF7F\"},{\"serieName\": \"1d0beb84-492b-44a0-8378-f9e999349acb\",\"color\": \"#FCC838\"},{\"serieName\": \"c86885ee-7fae-4d20-9d1b-672a03b87e48\",\"color\": \"#FF8142\"},{\"serieName\": \"cell phone\",\"color\": \"#B094F8\"},{\"serieName\": \"crash\",\"color\": \"#8C62F5\"},{\"serieName\": \"distraction\",\"color\": \"#56D3A8\"},{\"serieName\": \"hard accel\",\"color\": \"#06BF7F\"},{\"serieName\": \"hard brake\",\"color\": \"#FCD977\"},{\"serieName\": \"hard corner\",\"color\": \"#FCC838\"},{\"serieName\": \"manual event\",\"color\": \"#82DFE9\"},{\"serieName\": \"seat belt violation\",\"color\": \"#48D1E0\"},{\"serieName\": \"stop sign violation\",\"color\": \"#2359B6\"},{\"serieName\": \"tailgating\",\"color\": \"#71A1F4\"},{\"serieName\": \"unsafe lane change\",\"color\": \"#2E75F0\"},{\"serieName\": \"00e048cc-e952-42c1-9d39-aa3c41dd8c2d\",\"color\": \"#48D1E0\"},{\"serieName\": \"Events per 1M Miles\",\"color\": \"#8C62F5\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 4ab2393c-e5f4-4e49-ba3d-8d79a677efbe
+  - id: Viz_21
+    viz_guid: 9771a278-8c32-4867-a239-1c8cfd8aab25
+    note_tile:
+      html_parsed_string: <h1><span>Coaching</span></h1>
+  - id: Viz_22
+    answer:
+      name: Average Weekly Fleet Drive Score Before vs After Dashcam Installation
+      description: "Top 30 Fleets by their improvement of drive score.\nFleets are considered to have a dashcam if 90% or more of their fleet has a dashcam installed.  \nDrive Score before dashcam is not impacted by global filters, and instead is based on ."
+      tables:
+      - id: Fleet Drive Score with Dashcam Dates
+        name: Fleet Drive Score with Dashcam Dates
+        fqn: 51f3f134-1ff2-4c70-9eb7-fbff84bae80f
+      search_query: "[Fleet Account Name] [Drive Score After Dashcam] [Drive Score Before Dashcam] [Drive Score After Dashcam] >= 0 [Difference of Drive Score Before-After] [Fleet Account Name] top 30 by [Difference of Drive Score Before-After] [Vehicle Count] [Activated Vehicle Count] [Vehicle Activation %] sort by [Difference of Drive Score Before-After] descending [Vehicle Activation %] >= 0.9"
+      answer_columns:
+      - name: Activated Vehicle Count
+      - name: Difference of Drive Score Before-After
+        format:
+          category: NUMBER
+          numberFormatConfig:
+            unit: NONE
+            decimals: 2.0
+            negativeValueFormat: PREFIX_DASH
+            toSeparateThousands: true
+          isCategoryEditable: true
+      - name: Drive Score After Dashcam
+      - name: Drive Score Before Dashcam
+      - name: Fleet Account Name
+      - name: Vehicle Activation %
+      - name: Vehicle Count
+      table:
+        table_columns:
+        - column_id: Activated Vehicle Count
+          show_headline: false
+        - column_id: Difference of Drive Score Before-After
+          show_headline: false
+        - column_id: Drive Score After Dashcam
+          show_headline: false
+        - column_id: Drive Score Before Dashcam
+          show_headline: false
+        - column_id: Fleet Account Name
+          show_headline: false
+        - column_id: Vehicle Activation %
+          show_headline: false
+        - column_id: Vehicle Count
+          show_headline: false
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: LINE
+        chart_columns:
+        - column_id: Activated Vehicle Count
+        - column_id: Difference of Drive Score Before-After
+        - column_id: Drive Score After Dashcam
+        - column_id: Drive Score Before Dashcam
+        - column_id: Fleet Account Name
+        - column_id: Vehicle Activation %
+        - column_id: Vehicle Count
+        axis_configs:
+        - x:
+          - Fleet Account Name
+          "y":
+          - Drive Score After Dashcam
+          - Drive Score Before Dashcam
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {\"xGridlineEnabled\": true,\"yGridlineEnabled\": true},\"responsiveLayoutPreference\": \"USER_PREFERRED_OFF\",\"chartSpecific\": {\"markersEnabled\": true,\"pivotSummariesState\": {}},\"showStackedLabels\": true,\"allLabels\": true,\"legendPosition\": \"TOP_LEGEND\"},\"columnProperties\": [{\"columnId\": \"Fleet Account Name\",\"columnProperty\": {}},{\"columnId\": \"Difference of Drive Score Before-After\",\"columnProperty\": {}},{\"columnId\": \"Drive Score After Dashcam\",\"columnProperty\": {\"dataLabels\": true}},{\"columnId\": \"Drive Score Before Dashcam\",\"columnProperty\": {\"dataLabels\": true}},{\"columnId\": \"Vehicle Count\",\"columnProperty\": {}},{\"columnId\": \"Activated Vehicle Count\",\"columnProperty\": {}},{\"columnId\": \"Vehicle Activation %\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"8ccd399c-e311-4b0d-91c4-890d5fc42964\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Fleet Account Name\"]}},{\"id\": \"41477d3c-a773-4d8d-a63b-241ff8f89c5c\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Drive Score After Dashcam\",\"Drive Score Before Dashcam\"],\"isOpposite\": false}}],\"systemSeriesColors\": [{\"serieName\": \"Drive Score Before Dashcam\",\"color\": \"#2E75F0\"},{\"serieName\": \"Drive Score After Dashcam\",\"color\": \"#48D1E0\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 4fd7fb7f-2568-43f0-872d-ef2bf0a98588
+  - id: Viz_23
+    answer:
+      name: Enrollment Summary
+      description: How many devices an account is subscribed to v. Active (Active number based on the most recent 90 days as Default)
+      tables:
+      - id: Enrollment Summary
+        name: Enrollment Summary
+        fqn: d2aa3b2f-64f0-4c39-8b9f-8392dd6406cc
+      search_query: "[Fleet Account ID] [Subscribed VG Count] [Subscribed Dashcam] [Active VG Count] [Fleet Account Name] [Active Dashcam] [Active Smart Dashcam DF] [Active Smart Dashcam RF] [Active AI Dashcam DF] [Active AI Dashcam RF] [Active First-Gen Smart Dashcam RF]"
+      answer_columns:
+      - name: Active AI Dashcam DF
+      - name: Active AI Dashcam RF
+      - name: Active Dashcam
+      - name: Active First-Gen Smart Dashcam RF
+      - name: Active Smart Dashcam DF
+      - name: Active Smart Dashcam RF
+      - name: Active VG Count
+        custom_name: Active VG Count
+      - name: Fleet Account ID
+      - name: Fleet Account Name
+      - name: Subscribed Dashcam
+      - name: Subscribed VG Count
+      table:
+        table_columns:
+        - column_id: Active AI Dashcam DF
+          show_headline: false
+        - column_id: Active AI Dashcam RF
+          show_headline: false
+        - column_id: Active Dashcam
+          show_headline: false
+        - column_id: Active First-Gen Smart Dashcam RF
+          show_headline: false
+        - column_id: Active Smart Dashcam DF
+          show_headline: false
+        - column_id: Active Smart Dashcam RF
+          show_headline: false
+        - column_id: Active VG Count
+          show_headline: false
+        - column_id: Fleet Account ID
+          show_headline: false
+        - column_id: Fleet Account Name
+          show_headline: false
+        - column_id: Subscribed Dashcam
+          show_headline: false
+        - column_id: Subscribed VG Count
+          show_headline: false
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"widthState\": [{\"columnId\": \"Fleet Account Name\",\"width\": 295.0},{\"columnId\": \"Fleet Account ID\",\"width\": 140.1473388671875}],\"orderedColumnIds\": [\"Fleet Account Name\",\"Fleet Account ID\",\"Subscribed VG Count\",\"Subscribed Dashcam\",\"Active VG Count\"]}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Active AI Dashcam DF
+        - column_id: Active AI Dashcam RF
+        - column_id: Active Dashcam
+        - column_id: Active First-Gen Smart Dashcam RF
+        - column_id: Active Smart Dashcam DF
+        - column_id: Active Smart Dashcam RF
+        - column_id: Active VG Count
+        - column_id: Fleet Account ID
+        - column_id: Fleet Account Name
+        - column_id: Subscribed Dashcam
+        - column_id: Subscribed VG Count
+        axis_configs:
+        - x:
+          - Fleet Account Name
+          "y":
+          - Subscribed VG Count
+          - Subscribed Dashcam
+          - Active VG Count
+          - Active Dashcam
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Fleet Account ID\",\"columnProperty\": {}},{\"columnId\": \"Subscribed VG Count\",\"columnProperty\": {}},{\"columnId\": \"Subscribed Dashcam\",\"columnProperty\": {}},{\"columnId\": \"Active VG Count\",\"columnProperty\": {}},{\"columnId\": \"Fleet Account Name\",\"columnProperty\": {}},{\"columnId\": \"Active Dashcam\",\"columnProperty\": {}},{\"columnId\": \"Active Smart Dashcam DF\",\"columnProperty\": {}},{\"columnId\": \"Active Smart Dashcam RF\",\"columnProperty\": {}},{\"columnId\": \"Active AI Dashcam DF\",\"columnProperty\": {}},{\"columnId\": \"Active AI Dashcam RF\",\"columnProperty\": {}},{\"columnId\": \"Active First-Gen Smart Dashcam RF\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"c237d2f4-956a-4c68-9ccf-58e1430e97e7\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Subscribed VG Count\"],\"isOpposite\": false}},{\"id\": \"749ec11d-d243-4da2-9a55-677688e3c80a\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Subscribed Dashcam\"],\"isOpposite\": true}},{\"id\": \"2bfb07fc-f112-4be5-853a-d416c13a02cc\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Active VG Count\"],\"isOpposite\": true}},{\"id\": \"81f7a792-9a90-47d6-abdb-07cdc450b37b\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Active Dashcam\"],\"isOpposite\": true}},{\"id\": \"f455af4c-add9-4d20-8f9e-280c37daf51e\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Fleet Account Name\"]}}]}"
+      display_mode: TABLE_MODE
+    viz_guid: c94287b3-1e51-4ed3-857f-4eeedd2e9143
+  - id: Viz_24
+    answer:
+      name: Safety Event Counts by Event Time of Day
+      tables:
+      - id: Safety Events
+        name: Safety Events
+        fqn: 5c5e7ca2-ea19-423f-a2cb-65bb2aac1ed8
+      search_query: "[Safety Event Counts] [Event Time of Day]"
+      answer_columns:
+      - name: Event Time of Day
+      - name: Safety Event Counts
+      table:
+        table_columns:
+        - column_id: Event Time of Day
+          show_headline: false
+        - column_id: Safety Event Counts
+          show_headline: false
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Event Time of Day
+        - column_id: Safety Event Counts
+        axis_configs:
+        - x:
+          - Event Time of Day
+          "y":
+          - Safety Event Counts
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {\"xGridlineEnabled\": false,\"yGridlineEnabled\": true},\"responsiveLayoutPreference\": \"AUTO_ON\",\"showLinearRegressionLine\": true,\"chartSpecific\": {\"customProps\": \"{\\\"advancedProperties\\\":{\\\"tooltip\\\":{\\\"enabled\\\":true,\\\"borderWidth\\\":\\\"1\\\",\\\"opacity\\\":\\\"100\\\",\\\"label\\\":{\\\"fontSize\\\":\\\"12\\\",\\\"boldFontWeight\\\":false,\\\"underlineTextDecoration\\\":false,\\\"italicFontStyle\\\":false},\\\"value\\\":{\\\"fontSize\\\":\\\"12\\\",\\\"boldFontWeight\\\":false,\\\"underlineTextDecoration\\\":false,\\\"italicFontStyle\\\":false}},\\\"regression\\\":{\\\"color\\\":\\\"#06BF7F\\\",\\\"lineWidth\\\":\\\"8\\\",\\\"dashStyle\\\":\\\"Dash\\\"},\\\"gridlines\\\":{\\\"xAxis\\\":{\\\"gridLineWidth\\\":\\\"2\\\",\\\"gridLineDashStyle\\\":\\\"Solid\\\"},\\\"yAxis\\\":{\\\"gridLineColor\\\":\\\"\\\",\\\"gridLineWidth\\\":\\\"2\\\",\\\"gridLineDashStyle\\\":\\\"Solid\\\"}},\\\"answerLevelSettings\\\":{\\\"dashStyle\\\":\\\"Solid\\\",\\\"lineWidth\\\":\\\"\\\",\\\"markerType\\\":\\\"Circle\\\",\\\"markerRadius\\\":\\\"\\\",\\\"borderWidth\\\":\\\"0\\\",\\\"connectingLines\\\":false}}}\",\"pivotSummariesState\": {}},\"showStackedLabels\": true,\"allLabels\": true},\"columnProperties\": [{\"columnId\": \"Event Time of Day\",\"columnProperty\": {}},{\"columnId\": \"Safety Event Counts\",\"columnProperty\": {\"dataLabels\": true}}],\"axisProperties\": [{\"id\": \"10576feb-1bca-40bc-92f0-da7e81c40e6f\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Safety Event Counts\"],\"isOpposite\": false}},{\"id\": \"91a05baa-bec1-49af-9e33-07dc211ceb3d\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Event Time of Day\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Safety Event Counts\",\"color\": \"#8C62F5\"},{\"serieName\": \"highcharts-regression\",\"color\": \"#FF8142\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: c275c9cf-2797-4257-96c5-bf6c9d2ada3e
+  - id: Viz_25
+    answer:
+      name: Coaching Status Breakout
+      description: Monthly View
+      tables:
+      - id: Safety Events
+        name: Safety Events
+        fqn: 5c5e7ca2-ea19-423f-a2cb-65bb2aac1ed8
+      search_query: "[Event Date] [Event Date].monthly [Safety Event Counts] [Coaching Status]"
+      answer_columns:
+      - name: Coaching Status
+      - name: Month(Event Date)
+      - name: Safety Event Counts
+      table:
+        table_columns:
+        - column_id: Coaching Status
+          show_headline: false
+        - column_id: Month(Event Date)
+          show_headline: false
+        - column_id: Safety Event Counts
+          show_headline: false
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: PIE
+        chart_columns:
+        - column_id: Coaching Status
+        - column_id: Month(Event Date)
+        - column_id: Safety Event Counts
+        axis_configs:
+        - x:
+          - Coaching Status
+          "y":
+          - Safety Event Counts
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"markersEnabled\": true,\"pivotSummariesState\": {}},\"showStackedLabels\": false,\"allLabels\": false},\"columnProperties\": [{\"columnId\": \"Month(Event Date)\",\"columnProperty\": {\"dataLabels\": true}},{\"columnId\": \"Coaching Status\",\"columnProperty\": {\"dataLabels\": true}},{\"columnId\": \"Safety Event Counts\",\"columnProperty\": {\"dataLabels\": false}}],\"axisProperties\": [{\"id\": \"03fca84b-586c-4ffd-8238-19acad2adbe4\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Safety Event Counts\"],\"isOpposite\": false}},{\"id\": \"1cddb3b1-c9e4-4cc0-bbbf-4ccfc974111f\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Coaching Status\"]}}],\"seriesColors\": [{\"serieName\": \"a962725b-f3c0-4877-9f7d-848eac04dc59\",\"color\": \"#48D1E0\"},{\"serieName\": \"4a26a8be-87cb-4003-89e3-488f71787b64\",\"color\": \"#2E75F0\"},{\"serieName\": \"pending_review\",\"color\": \"#06BF7F\"},{\"serieName\": \"coachable\",\"color\": \"#48D1E0\"},{\"serieName\": \"coached\",\"color\": \"#2E75F0\"},{\"serieName\": \"uncoachable\",\"color\": \"#747E8C\"}],\"systemSeriesColors\": [{\"serieName\": \"a962725b-f3c0-4877-9f7d-848eac04dc59\",\"color\": \"#48D1E0\"},{\"serieName\": \"4a26a8be-87cb-4003-89e3-488f71787b64\",\"color\": \"#2E75F0\"},{\"serieName\": \"coachable\",\"color\": \"#06BF7F\"},{\"serieName\": \"coached\",\"color\": \"#FCC838\"},{\"serieName\": \"pending_review\",\"color\": \"#48D1E0\"},{\"serieName\": \"uncoachable\",\"color\": \"#2E75F0\"}]}"
+      display_mode: CHART_MODE
+      parameter_values:
+      - key: Active Days (Enrolment Summary only)
+        value: "90"
+    viz_guid: 3173dd82-6f10-4e3d-9411-f5ee434b5a5a
+  - id: Viz_26
+    answer:
+      name: Collisions by Severity
+      tables:
+      - id: Safety Events
+        name: Safety Events
+        fqn: 5c5e7ca2-ea19-423f-a2cb-65bb2aac1ed8
+      search_query: "[Safety Event Counts] [Event Types].Crash [Severity]"
+      answer_columns:
+      - name: Safety Event Counts
+      - name: Severity
+      table:
+        table_columns:
+        - column_id: Safety Event Counts
+          show_headline: false
+        - column_id: Severity
+          show_headline: false
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: PIE
+        chart_columns:
+        - column_id: Safety Event Counts
+        - column_id: Severity
+        axis_configs:
+        - x:
+          - Severity
+          "y":
+          - Safety Event Counts
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}},\"showStackedLabels\": true,\"allLabels\": true},\"columnProperties\": [{\"columnId\": \"Safety Event Counts\",\"columnProperty\": {\"dataLabels\": true}},{\"columnId\": \"Severity\",\"columnProperty\": {\"dataLabels\": true}}],\"axisProperties\": [{\"id\": \"8ccc39f3-bc83-4b6a-ac8c-2e44387af135\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Safety Event Counts\"],\"isOpposite\": false}},{\"id\": \"6cb9ea1e-9ba9-49ed-8277-e2e2ebc301a0\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Severity\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Safety Event Counts\",\"color\": \"#FF8142\"},{\"serieName\": \"{null}\",\"color\": \"#06BF7F\"},{\"serieName\": \"1\",\"color\": \"#FCC838\"},{\"serieName\": \"2\",\"color\": \"#48D1E0\"},{\"serieName\": \"3\",\"color\": \"#71A1F4\"},{\"serieName\": \"5\",\"color\": \"#2E75F0\"},{\"serieName\": \"critical\",\"color\": \"#06BF7F\"},{\"serieName\": \"low\",\"color\": \"#FCC838\"},{\"serieName\": \"medium\",\"color\": \"#48D1E0\"},{\"serieName\": \"severe\",\"color\": \"#71A1F4\"},{\"serieName\": \"uncategorized\",\"color\": \"#2E75F0\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 9abe2f55-9f9d-492c-b73e-66a69b521eef
+  - id: Viz_27
+    answer:
+      name: Distribution of Safety Scores
+      description: "Excellent 91-100, Good 75-90, Poor 50-74"
+      tables:
+      - id: Fleet Drive Score with Dashcam Dates
+        name: Fleet Drive Score with Dashcam Dates
+        fqn: 51f3f134-1ff2-4c70-9eb7-fbff84bae80f
+      search_query: "[Safety Score Rank] count [Drive Score]"
+      answer_columns:
+      - name: Number of Drive Score
+      - name: Safety Score Rank
+      table:
+        table_columns:
+        - column_id: Number of Drive Score
+          show_headline: false
+        - column_id: Safety Score Rank
+          show_headline: false
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: PIE
+        chart_columns:
+        - column_id: Number of Drive Score
+        - column_id: Safety Score Rank
+        axis_configs:
+        - x:
+          - Safety Score Rank
+          "y":
+          - Number of Drive Score
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}},\"showStackedLabels\": true,\"allLabels\": true},\"columnProperties\": [{\"columnId\": \"Safety Score Rank\",\"columnProperty\": {}},{\"columnId\": \"Number of Drive Score\",\"columnProperty\": {\"dataLabels\": true}}],\"axisProperties\": [{\"id\": \"c1f8c4f1-d1ab-4143-ad8d-b37afac6b8db\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Number of Drive Score\"],\"isOpposite\": false}},{\"id\": \"78ee6137-5b28-43c0-8e91-81e2b43e22a3\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Safety Score Rank\"]}}],\"systemSeriesColors\": [{\"serieName\": \"b9532a52-6924-41e6-ab8b-4abe96d9207c\",\"color\": \"#48D1E0\"},{\"serieName\": \"excellent\",\"color\": \"#FCC838\"},{\"serieName\": \"fair\",\"color\": \"#48D1E0\"},{\"serieName\": \"good\",\"color\": \"#2E75F0\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: ac17d523-7a82-4f72-a2af-b92407c582e3
+  - id: Viz_28
+    answer:
+      name: Collisions and Near Misses by Month
+      tables:
+      - id: Safety Events
+        name: Safety Events
+        fqn: 5c5e7ca2-ea19-423f-a2cb-65bb2aac1ed8
+      search_query: "[Safety Event Counts] [Event Date].monthly [Event Types] [Event Types].Crash [Event Types].'Near Miss'"
+      answer_columns:
+      - name: Event Types
+      - name: Month(Event Date)
+      - name: Safety Event Counts
+      table:
+        table_columns:
+        - column_id: Event Types
+          show_headline: false
+        - column_id: Month(Event Date)
+          show_headline: false
+        - column_id: Safety Event Counts
+          show_headline: false
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Event Types
+        - column_id: Month(Event Date)
+        - column_id: Safety Event Counts
+        axis_configs:
+        - x:
+          - Month(Event Date)
+          "y":
+          - Safety Event Counts
+          color:
+          - Event Types
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {\"xGridlineEnabled\": false,\"yGridlineEnabled\": true},\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}},\"showStackedLabels\": true},\"columnProperties\": [{\"columnId\": \"Month(Event Date)\",\"columnProperty\": {}},{\"columnId\": \"Event Types\",\"columnProperty\": {}},{\"columnId\": \"Safety Event Counts\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"0c3dda33-5e4f-4287-9f4b-966a177a0c9f\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Safety Event Counts\"],\"isOpposite\": false}},{\"id\": \"412d810a-2045-4a28-a726-55a61c36f7d4\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Month(Event Date)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"crash\",\"color\": \"#48D1E0\"},{\"serieName\": \"near miss\",\"color\": \"#2E75F0\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 69e6f890-2e74-40d1-8aab-ba252db47f89
+  - id: Viz_29
+    answer:
+      name: Fleet Account ID / DOT ID Lookup
+      tables:
+      - id: Insurance Partner
+        name: Insurance Partner
+        fqn: 11f673af-56b6-4164-b941-b7dbc2a3ded4
+      search_query: "[Fleet Account Name] [Fleet Account ID] [DOT ID] sort by [DOT ID]"
+      answer_columns:
+      - name: DOT ID
+      - name: Fleet Account ID
+      - name: Fleet Account Name
+      table:
+        table_columns:
+        - column_id: DOT ID
+          show_headline: false
+        - column_id: Fleet Account ID
+          show_headline: false
+        - column_id: Fleet Account Name
+          show_headline: false
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"widthState\": [{\"columnId\": \"Fleet Account ID\",\"width\": 232.1473388671875},{\"columnId\": \"Fleet Account Name\",\"width\": 448.0},{\"columnId\": \"DOT ID\",\"width\": 944.0041351318359}],\"density\": \"COMPACT\",\"orderedColumnIds\": [\"Fleet Account ID\",\"Fleet Account Name\"]}"
+      chart:
+        type: SCATTER
+        chart_columns:
+        - column_id: DOT ID
+        - column_id: Fleet Account ID
+        - column_id: Fleet Account Name
+        axis_configs:
+        - x:
+          - Fleet Account ID
+          "y":
+          - DOT ID
+          category:
+          - Fleet Account Name
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Fleet Account Name\",\"columnProperty\": {}},{\"columnId\": \"Fleet Account ID\",\"columnProperty\": {}},{\"columnId\": \"DOT ID\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"9be939b1-c5d8-4fc7-bb84-1d11b8000f10\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"DOT ID\"],\"isOpposite\": false}},{\"id\": \"d42eda2f-c2ba-4f9b-a22f-497074d31ad1\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Fleet Account ID\"]}}]}"
+      display_mode: TABLE_MODE
+    viz_guid: 7fbba5b7-d133-460a-91c9-885efd4209ce
+  - id: Viz_30
+    answer:
+      name: Average Fleet Drive Score Weekly
+      tables:
+      - id: Fleet Drive Score with Dashcam Dates
+        name: Fleet Drive Score with Dashcam Dates
+        fqn: 51f3f134-1ff2-4c70-9eb7-fbff84bae80f
+      search_query: "average [Drive Score] [Score Week] = 'last 6 months' [Score Week].weekly"
+      answer_columns:
+      - name: Average Drive Score
+      - name: Week(Score Week)
+      table:
+        table_columns:
+        - column_id: Average Drive Score
+          show_headline: false
+        - column_id: Week(Score Week)
+          show_headline: false
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: LINE
+        chart_columns:
+        - column_id: Average Drive Score
+        - column_id: Week(Score Week)
+        axis_configs:
+        - x:
+          - Week(Score Week)
+          "y":
+          - Average Drive Score
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"customProps\": \"{\\\"showLabel\\\":true,\\\"showComparison\\\":false,\\\"showSparkline\\\":false,\\\"showAnomalies\\\":true,\\\"showBounds\\\":true,\\\"customCompare\\\":\\\"PREV_AVAILABLE\\\"}\",\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Average Drive Score\",\"columnProperty\": {}},{\"columnId\": \"Week(Score Week)\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"fc48bc1a-4414-43e6-ba96-03eb2c77227e\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Average Drive Score\"],\"isOpposite\": false}},{\"id\": \"c6fa7dcc-cf8f-4d58-b4d5-3d46010ba5fd\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Week(Score Week)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Average Drive Score\",\"color\": \"#2770ef\"}]}"
+      display_mode: CHART_MODE
+      parameter_values:
+      - key: Active Days (Enrolment Summary only)
+        value: "90"
+    viz_guid: a650273b-8b77-4d9c-a2e2-1ccee422866d
+  - id: Viz_31
+    answer:
+      name: Event Count by Lattitude and Longitude
+      tables:
+      - id: Safety Events
+        name: Safety Events
+        fqn: 5c5e7ca2-ea19-423f-a2cb-65bb2aac1ed8
+      search_query: "[Lat] [Lon] [Safety Event Counts]"
+      answer_columns:
+      - name: Lat
+      - name: Lon
+      - name: Safety Event Counts
+      table:
+        table_columns:
+        - column_id: Lat
+          show_headline: false
+        - column_id: Lon
+          show_headline: false
+        - column_id: Safety Event Counts
+          show_headline: false
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: GEO_HEATMAP
+        chart_columns:
+        - column_id: Lat
+        - column_id: Lon
+        - column_id: Safety Event Counts
+        axis_configs:
+        - x:
+          - Lat
+          - Lon
+          "y":
+          - Safety Event Counts
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"mapviewport\": {\"center\": [-9818892.103008343,4746573.6739458265],\"zoomLevel\": 4.705365787850043,\"extent\": [-1.6776312671778137E7,2478436.567438727,-2861471.534238549,7014710.780452926]},\"chartSpecific\": {\"customProps\": \"{\\\"tileType\\\":\\\"outdoors-v9\\\"}\",\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Lat\",\"columnProperty\": {}},{\"columnId\": \"Lon\",\"columnProperty\": {}},{\"columnId\": \"Safety Event Counts\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"741b3f31-a6bb-4d32-9819-b5afca3f57e7\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Safety Event Counts\"],\"isOpposite\": false}},{\"id\": \"577d0620-4a93-4e7a-aecb-595981f679c5\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Lat\",\"Lon\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Safety Event Counts\",\"color\": \"#F04152\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 3e96bf0c-48a0-4fa5-8869-7b7f2e4b590d
+  - id: Viz_32
+    answer:
+      name: Safety Event Counts by Event Time of Day - per 1M Miles
+      tables:
+      - id: Safety Events
+        name: Safety Events
+        fqn: 5c5e7ca2-ea19-423f-a2cb-65bb2aac1ed8
+      search_query: "[Event Time of Day] [Event Date] = 'last 6 months' [Events per 1M Miles]"
+      answer_columns:
+      - name: Event Time of Day
+      - name: Events per 1M Miles
+      table:
+        table_columns:
+        - column_id: Event Time of Day
+          show_headline: false
+        - column_id: Events per 1M Miles
+          show_headline: false
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Event Time of Day
+        - column_id: Events per 1M Miles
+        axis_configs:
+        - x:
+          - Event Time of Day
+          "y":
+          - Events per 1M Miles
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {\"xGridlineEnabled\": false,\"yGridlineEnabled\": true},\"responsiveLayoutPreference\": \"AUTO_ON\",\"showLinearRegressionLine\": true,\"chartSpecific\": {\"customProps\": \"{\\\"advancedProperties\\\":{\\\"tooltip\\\":{\\\"enabled\\\":true,\\\"borderWidth\\\":\\\"1\\\",\\\"opacity\\\":\\\"100\\\",\\\"label\\\":{\\\"fontSize\\\":\\\"12\\\",\\\"boldFontWeight\\\":false,\\\"underlineTextDecoration\\\":false,\\\"italicFontStyle\\\":false},\\\"value\\\":{\\\"fontSize\\\":\\\"12\\\",\\\"boldFontWeight\\\":false,\\\"underlineTextDecoration\\\":false,\\\"italicFontStyle\\\":false}},\\\"regression\\\":{\\\"color\\\":\\\"#06BF7F\\\",\\\"lineWidth\\\":\\\"8\\\",\\\"dashStyle\\\":\\\"Dash\\\"},\\\"gridlines\\\":{\\\"xAxis\\\":{\\\"gridLineWidth\\\":\\\"2\\\",\\\"gridLineDashStyle\\\":\\\"Solid\\\"},\\\"yAxis\\\":{\\\"gridLineColor\\\":\\\"\\\",\\\"gridLineWidth\\\":\\\"2\\\",\\\"gridLineDashStyle\\\":\\\"Solid\\\"}},\\\"answerLevelSettings\\\":{\\\"dashStyle\\\":\\\"Solid\\\",\\\"lineWidth\\\":\\\"\\\",\\\"markerType\\\":\\\"Circle\\\",\\\"markerRadius\\\":\\\"\\\",\\\"borderWidth\\\":\\\"0\\\",\\\"connectingLines\\\":false}}}\",\"pivotSummariesState\": {}},\"showStackedLabels\": true,\"allLabels\": true},\"columnProperties\": [{\"columnId\": \"Event Time of Day\",\"columnProperty\": {}},{\"columnId\": \"Events per 1M Miles\",\"columnProperty\": {\"dataLabels\": true}}],\"axisProperties\": [{\"id\": \"70b4d77c-3d43-4d76-adfe-bc0992d2b0f1\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Events per 1M Miles\"],\"isOpposite\": false}},{\"id\": \"becc00cb-d96b-4ee8-a6a7-eb1b2c280082\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Event Time of Day\"]}}],\"systemSeriesColors\": [{\"serieName\": \"e09035ea-66fb-4a05-bc8c-4a5bd2ed6818\",\"color\": \"#8C62F5\"},{\"serieName\": \"highcharts-regression\",\"color\": \"#FF8142\"},{\"serieName\": \"Events per 1M Miles\",\"color\": \"#8C62F5\"}]}"
+      display_mode: CHART_MODE
+      parameter_values:
+      - key: Active Days (Enrolment Summary only)
+        value: "90"
+    viz_guid: d24028c6-cf91-4a3e-be67-eb36e5c86e05
+  - id: Viz_33
+    answer:
+      name: Safety Event Counts by Event Time of Day
+      tables:
+      - id: Safety Events
+        name: Safety Events
+        fqn: 5c5e7ca2-ea19-423f-a2cb-65bb2aac1ed8
+      search_query: "[Safety Event Counts] [Event Time of Day]"
+      answer_columns:
+      - name: Event Time of Day
+      - name: Safety Event Counts
+      table:
+        table_columns:
+        - column_id: Event Time of Day
+          show_headline: false
+        - column_id: Safety Event Counts
+          show_headline: false
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Event Time of Day
+        - column_id: Safety Event Counts
+        axis_configs:
+        - x:
+          - Event Time of Day
+          "y":
+          - Safety Event Counts
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {\"xGridlineEnabled\": false,\"yGridlineEnabled\": true},\"responsiveLayoutPreference\": \"AUTO_ON\",\"showLinearRegressionLine\": true,\"chartSpecific\": {\"customProps\": \"{\\\"advancedProperties\\\":{\\\"tooltip\\\":{\\\"enabled\\\":true,\\\"borderWidth\\\":\\\"1\\\",\\\"opacity\\\":\\\"100\\\",\\\"label\\\":{\\\"fontSize\\\":\\\"12\\\",\\\"boldFontWeight\\\":false,\\\"underlineTextDecoration\\\":false,\\\"italicFontStyle\\\":false},\\\"value\\\":{\\\"fontSize\\\":\\\"12\\\",\\\"boldFontWeight\\\":false,\\\"underlineTextDecoration\\\":false,\\\"italicFontStyle\\\":false}},\\\"regression\\\":{\\\"color\\\":\\\"#06BF7F\\\",\\\"lineWidth\\\":\\\"8\\\",\\\"dashStyle\\\":\\\"Dash\\\"},\\\"gridlines\\\":{\\\"xAxis\\\":{\\\"gridLineWidth\\\":\\\"2\\\",\\\"gridLineDashStyle\\\":\\\"Solid\\\"},\\\"yAxis\\\":{\\\"gridLineColor\\\":\\\"\\\",\\\"gridLineWidth\\\":\\\"2\\\",\\\"gridLineDashStyle\\\":\\\"Solid\\\"}},\\\"answerLevelSettings\\\":{\\\"dashStyle\\\":\\\"Solid\\\",\\\"lineWidth\\\":\\\"\\\",\\\"markerType\\\":\\\"Circle\\\",\\\"markerRadius\\\":\\\"\\\",\\\"borderWidth\\\":\\\"0\\\",\\\"connectingLines\\\":false}}}\",\"pivotSummariesState\": {}},\"showStackedLabels\": true,\"allLabels\": true},\"columnProperties\": [{\"columnId\": \"Event Time of Day\",\"columnProperty\": {}},{\"columnId\": \"Safety Event Counts\",\"columnProperty\": {\"dataLabels\": true}}],\"axisProperties\": [{\"id\": \"10576feb-1bca-40bc-92f0-da7e81c40e6f\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Safety Event Counts\"],\"isOpposite\": false}},{\"id\": \"91a05baa-bec1-49af-9e33-07dc211ceb3d\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Event Time of Day\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Safety Event Counts\",\"color\": \"#8C62F5\"},{\"serieName\": \"highcharts-regression\",\"color\": \"#FF8142\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: d5f4cd85-a7a3-4bee-9619-1587e488224d
+  filters:
+  - column:
+    - Fleet Drive Score with Dashcam Dates::Score Week
+    - Driver Performance Event::Event Date
+    - Safety Events::Event Date
+    is_mandatory: false
+    date_filter:
+      type: LAST_N_PERIOD
+      number: 6
+      oper: =
+      date_period: MONTH
+    display_name: Date
+  - column:
+    - Fleet Drive Score with Dashcam Dates::Camera Flag
+    is_mandatory: false
+    is_single_value: false
+    display_name: Camera / No Camera
+  - column:
+    - Safety Events::Event Types
+    - Driver Performance Event::Event Type
+    excluded_visualizations:
+    - Viz_26
+    - Viz_28
+    is_mandatory: false
+    is_single_value: false
+    display_name: ""
+  - column:
+    - Insurance Partner::Insurance Partner
+    - Driver Performance Event::Insurance Partner
+    - Enrollment Summary::Insurance Partner
+    - Fleet Drive Score with Dashcam Dates::Insurance Partner
+    - Safety Events::Insurance Partner
+    is_mandatory: false
+    is_single_value: false
+    display_name: ""
+  - column:
+    - Insurance Partner::Fleet Account Name
+    - Driver Performance Event::Fleet Account Name
+    - Enrollment Summary::Fleet Account Name
+    - Fleet Drive Score with Dashcam Dates::Fleet Account Name
+    - Safety Events::Fleet Account Name
+    is_mandatory: false
+    is_single_value: false
+    display_name: ""
+  - column:
+    - Insurance Partner::DOT ID
+    is_mandatory: false
+    is_single_value: false
+    display_name: DOT ID (DOT Lookup Only)
+  layout:
+    tabs:
+    - name: Dashboard
+      description: ""
+      tiles:
+      - visualization_id: Viz_1
+        x: 6
+        "y": 1
+        height: 3
+        width: 3
+      - visualization_id: Viz_2
+        x: 4
+        "y": 17
+        height: 6
+        width: 8
+      - visualization_id: Viz_3
+        x: 0
+        "y": 1
+        height: 3
+        width: 2
+      - visualization_id: Viz_4
+        x: 6
+        "y": 12
+        height: 4
+        width: 6
+      - visualization_id: Viz_5
+        x: 0
+        "y": 12
+        height: 4
+        width: 6
+      - visualization_id: Viz_7
+        x: 9
+        "y": 1
+        height: 3
+        width: 3
+      - visualization_id: Viz_10
+        x: 6
+        "y": 4
+        height: 4
+        width: 3
+      - visualization_id: Viz_11
+        x: 0
+        "y": 4
+        height: 4
+        width: 3
+      - visualization_id: Viz_12
+        x: 9
+        "y": 4
+        height: 4
+        width: 3
+      - visualization_id: Viz_13
+        x: 3
+        "y": 4
+        height: 4
+        width: 3
+      - visualization_id: Viz_14
+        x: 0
+        "y": 0
+        height: 1
+        width: 12
+      - visualization_id: Viz_15
+        x: 4
+        "y": 1
+        height: 3
+        width: 2
+      - visualization_id: Viz_17
+        x: 0
+        "y": 23
+        height: 1
+        width: 12
+      - visualization_id: Viz_21
+        x: 0
+        "y": 16
+        height: 1
+        width: 12
+      - visualization_id: Viz_25
+        x: 0
+        "y": 17
+        height: 6
+        width: 4
+      - visualization_id: Viz_27
+        x: 2
+        "y": 1
+        height: 3
+        width: 2
+      - visualization_id: Viz_28
+        x: 0
+        "y": 8
+        height: 4
+        width: 12
+      - visualization_id: Viz_31
+        x: 0
+        "y": 24
+        height: 8
+        width: 6
+      - visualization_id: Viz_33
+        x: 6
+        "y": 32
+        height: 8
+        width: 6
+      id: 74adca45-83dc-4ccd-b839-88cbbd0e0620
+    - name: Analytics Playground
+      description: ""
+      tiles:
+      - visualization_id: Viz_24
+        x: 0
+        "y": 0
+        height: 4
+        width: 12
+      - visualization_id: Viz_26
+        x: 6
+        "y": 10
+        height: 8
+        width: 6
+      - visualization_id: Viz_30
+        x: 0
+        "y": 18
+        height: 4
+        width: 6
+      - visualization_id: Viz_22
+        x: 0
+        "y": 23
+        height: 4
+        width: 6
+      - visualization_id: Viz_9
+        x: 6
+        "y": 23
+        height: 4
+        width: 6
+      - visualization_id: Viz_19
+        x: 0
+        "y": 27
+        height: 4
+        width: 6
+      - visualization_id: Viz_20
+        x: 6
+        "y": 27
+        height: 4
+        width: 6
+      - visualization_id: Viz_6
+        x: 0
+        "y": 31
+        height: 4
+        width: 6
+      - visualization_id: Viz_16
+        x: 0
+        "y": 22
+        height: 1
+        width: 12
+      - visualization_id: Viz_8
+        x: 6
+        "y": 31
+        height: 8
+        width: 6
+      - visualization_id: Viz_32
+        x: 0
+        "y": 35
+        height: 8
+        width: 6
+      id: 2d332422-b742-44cc-a0d6-671b126d00cb
+    - name: Enrollment Summary & Activation
+      description: ""
+      tiles:
+      - visualization_id: Viz_23
+        x: 0
+        "y": 0
+        height: 8
+        width: 12
+      id: d9d98709-4030-4df5-acdb-4ae84a8baeb9
+    - name: DOT ID Lookup
+      description: ""
+      tiles:
+      - visualization_id: Viz_29
+        x: 0
+        "y": 0
+        height: 9
+        width: 12
+      id: 61a0fe14-edf8-4598-9cd1-6c8122e45b2e
+    - name: Event Definitions
+      description: ""
+      tiles:
+      - visualization_id: Viz_18
+        x: 0
+        "y": 0
+        height: 8
+        width: 12
+      id: 26bb1c9b-38c5-4f6e-afce-b04fcb9f37d7
+  parameter_overrides:
+  - key: 47adb210-e357-4912-b5e8-78b421de71eb
+    value:
+      name: Enrollment Summary::Active Days (Enrolment Summary only)
